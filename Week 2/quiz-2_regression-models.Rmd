@@ -1,0 +1,57 @@
+---
+title: '`Quiz 2` Regression Models'
+author: '`r if(knitr::is_html_output()) {"&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Anderson H Uyekita"} else {NULL}`'
+output:
+  github_document: default
+  html_document:
+    self_contained: true
+    toc: true
+    toc_depth: 4
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+params:
+  author: 'Anderson H Uyekita'
+  course: 'Regression Models'
+  course_url: 'https://www.coursera.org/learn/regression-models'
+  specialization: 'Data Science: Foundations using R Specialization'
+  specialization_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
+  instructor: 'Brian Caffo'
+  course_start: !r lubridate::ymd('2022/07/05', tz = 'America/Sao_Paulo')
+  course_finish: !r lubridate::today(tzone = "America/Sao_Paulo")
+  week: ' Week 2'
+always_allow_html: true
+---
+
+```{r setup,include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE, message = FALSE, warning = FALSE)
+library(rmarkdown)
+library(lubridate)
+```
+
+`r if(!knitr::is_html_output()) {sprintf(fmt = "* &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Author: %s", params$author)}`
+`r sprintf(fmt = "* &#x1f4da; Specialization: [%s](%s){target='_blank' rel='noopener'}", params$specialization, params$specialization_url)`
+`r sprintf(fmt = "* &#x1f4d6; Course: [%s](%s){target='_blank' rel='noopener'}", params$course, params$course_url)`
+    `r sprintf(fmt = "* &#x1F9D1;&#x200d;&#x1F3EB; Instructor: %s", params$instructor)`
+`r sprintf(fmt = "* &#x1F4C6; %s", params$week)`
+    `r sprintf(fmt = "* &#x1F6A6; Start: %s", format(params$course_start, "%A, %d %B %Y"))`
+    `r sprintf(fmt = "* &#x1F3C1; Finish: %s", format(params$course_finish, "%A, %d %B %Y"))`
+`r if(!knitr::is_html_output()) {"* &#x1F30E; Rpubs: [Interactive Document](https://rpubs.com/AndersonUyekita/quiz-2_regression-models)"}else{"* &#x1F4E6; Github Repository: [Static Document](https://github.com/AndersonUyekita/regression-models/blob/main/Week%202/quiz-2_regression-models.md){target='_blank' rel='noopener'}"}`
+
+--------------------------------------------------------------------------------
+
+## Question 1
+
+
+## Question 2
+
+
+## Question 3
+
+
+## Question 4
+
+
+## Question 5
+
+

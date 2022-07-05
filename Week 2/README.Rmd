@@ -1,0 +1,54 @@
+---
+title: '`Week 2` Regression Models'
+author: '`r if(knitr::is_html_output()) {"&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Anderson H Uyekita"} else {NULL}`'
+output:
+  github_document: default
+params:
+  author: 'Anderson H Uyekita'
+  course: 'Regression Models'
+  course_url: 'https://www.coursera.org/learn/regression-models'
+  specialization: 'Data Science: Foundations using R Specialization'
+  specialization_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
+  instructor: 'Brian Caffo'
+  course_start: !r lubridate::ymd('2022/07/05', tz = 'America/Sao_Paulo')
+  course_finish: !r lubridate::today(tzone = "America/Sao_Paulo")
+  week: ' Week 2'
+---
+
+```{r setup,include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE, message = FALSE, warning = FALSE)
+library(rmarkdown)
+library(lubridate)
+```
+
+`r if(!knitr::is_html_output()) {sprintf(fmt = "* &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Author: %s", params$author)}`
+`r sprintf(fmt = "* &#x1f4da; Specialization: [%s](%s){target='_blank' rel='noopener'}", params$specialization, params$specialization_url)`
+`r sprintf(fmt = "* &#x1f4d6; Course: [%s](%s){target='_blank' rel='noopener'}", params$course, params$course_url)`
+    `r sprintf(fmt = "* &#x1F9D1;&#x200d;&#x1F3EB; Instructor: %s", params$instructor)`
+`r sprintf(fmt = "* &#x1F4C6; %s", params$week)`
+    `r sprintf(fmt = "* &#x1F6A6; Start: %s", format(params$course_start, "%A, %d %B %Y"))`
+    `r sprintf(fmt = "* &#x1F3C1; Finish: %s", format(params$course_finish, "%A, %d %B %Y"))`
+
+--------------------------------------------------------------------------------
+
+#### Assignments & Deliverables
+
+* [&#x1F680; Course Project 2 Repository](https://github.com/AndersonUyekita/regression-models_course-project-2)
+* [&#x1F4DD; Quiz 2](./quiz-2_regression-models.md)
+
+#### Slides
+
+* Installing R
+* Installing R Studio
+* RStudio Tour
+* R Packages
+* Projects in R
+
+#### Description
+
+> This week, we will work through the remainder of linear regression and then turn to the first part of multivariable regression.
+
+--------------------------------------------------------------------------------
+
+## Class Notes
+

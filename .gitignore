@@ -19,6 +19,7 @@
 
 # RStudio files
 .Rproj.user/
+.Rproj.user/*
 
 # produced vignettes
 vignettes/*.html
@@ -37,3 +38,14 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Readings
+#
+# * https://linuxize.com/post/gitignore-ignoring-files-in-git/
+#
+# Find the files ignored:
+#
+# $git status --ignored
+#
+# Removing all cache folder.
+Week ?/quiz-?_reproducible-research_cache/**
