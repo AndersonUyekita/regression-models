@@ -19,6 +19,11 @@ params:
 knitr::opts_chunk$set(echo = TRUE, cache = TRUE, message = FALSE, warning = FALSE)
 library(rmarkdown)
 library(lubridate)
+library(tidyverse)
+library(ggplot2)
+library(magrittr)
+library(datasets)
+library(UsingR)
 ```
 
 `r if(!knitr::is_html_output()) {sprintf(fmt = "* &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Author: %s", params$author)}`
@@ -52,3 +57,84 @@ library(lubridate)
 
 ## Class Notes
 
+#### Multivariable regression
+
+>We now extend linear regression so that our models can contain more variables. A natural first approach is to assume additive effects, basically extending our line to a plane, or generalized version of a plane as we add more variables.  Multivariable regression represents one of the most widely used and successful methods in statistics.  
+
+> The interpretation of a multivariate regression coefficient is the expected change in the
+response per unit change in the regressor, holding all of the other regressors fixed.
+
+##### Example
+
+Multivariate using `Seatbelts` dataset.
+
+```{r}
+# Loading Seatbelts dataset
+library(datasets)
+
+# Creating a object.
+df <- as_tibble(datasets::Seatbelts)
+
+# Fitting the model
+fit <- lm(data = df, formula = DriversKilled ~ kms + PetrolPrice)
+
+# Printing the coefficients results.
+round(summary(fit)$coeff, 4)
+```
+
+All parameters have **rejected** the $H_0$ hypothesis. However, it lacks interpretation because the expected number of 215 drivers killed when the `kms` and `PetroPrice` are equal to zero has no sense.
+
+##### Adjusting the data
+
+Creating a meaningful model.
+
+```{r}
+# Loading Seatbelts dataset
+library(datasets)
+
+# Creating a object.
+df <- as_tibble(datasets::Seatbelts)
+
+# Centering the dataset.
+df$kms_avg <- df$kms - mean(df$kms)
+df$petrol_avg <- (df$PetrolPrice - mean(df$PetrolPrice))/sd(df$PetrolPrice)
+
+# Adding new variables to the dataset.
+kms_avg <- mean(df$kms)
+petrol_avg <- mean(df$PetrolPrice)
+
+# Fitting the model
+fit <- lm(data = df, formula = DriversKilled ~ kms_avg + petrol_avg)
+
+# Printing the coefficients results.
+summary(fit)$coeff
+```
+
+* The intercept of 122.8 is the estimated number of `DriversKilled` for the average `PetroPrice` and average `kms`;
+* The `PetroPrice` negative 7.9 means we expect less 7.9 `DriversKilled` per **one standard deviation** change in `PetroPrice`, and;
+* Maintaining the other variables constant, the negative 0.017 in average `kms` means we expect less 0.0017 `DriversKilled` per `kms`, It is counter intuitive because increasing the `kms` reduces the drivers killed.
+
+It is also possible to scale `kms` to analyze it in thousands.
+
+```{r}
+# Loading Seatbelts dataset
+library(datasets)
+
+# Creating a object.
+df <- as_tibble(datasets::Seatbelts)
+
+# Centering the dataset.
+df$kms_avg <- (df$kms - mean(df$kms))/1000
+df$petrol_avg <- (df$PetrolPrice - mean(df$PetrolPrice))/sd(df$PetrolPrice)
+
+# Adding new variables to the dataset.
+kms_avg <- mean(df$kms)
+petrol_avg <- mean(df$PetrolPrice)
+
+# Fitting the model
+fit <- lm(data = df, formula = DriversKilled ~ kms_avg + petrol_avg)
+
+# Printing the coefficients results.
+summary(fit)$coeff
+```
+* After the scaling, we expect less 1.75 `DriversKilled` per 1000 `kms`.
