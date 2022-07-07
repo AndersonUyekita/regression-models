@@ -19,6 +19,9 @@ params:
 knitr::opts_chunk$set(echo = TRUE, cache = TRUE, message = FALSE, warning = FALSE)
 library(rmarkdown)
 library(lubridate)
+library(UsingR)
+library(ggplot2)
+library(tidyverse)
 ```
 
 `r if(!knitr::is_html_output()) {sprintf(fmt = "* &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Author: %s", params$author)}`
@@ -38,11 +41,12 @@ library(lubridate)
 
 #### Slides
 
-* Installing R
-* Installing R Studio
-* RStudio Tour
-* R Packages
-* Projects in R
+* Module 2 -- Linear Regression & Multivariable Regression
+    * 02_01 Multivariate regression
+    * 02_02 Multivariate examples
+    * 02_03 Adjustment
+    * 02_04 Residual variation and diagnostics
+    * 02_05 Multiple variables
 
 #### Description
 
@@ -52,3 +56,131 @@ library(lubridate)
 
 ## Class Notes
 
+#### Statistical linear regression models
+
+> Up to this point, we’ve only considered estimation. Estimation is useful, but we also need to know **how to extend our estimates to a population**. This is the process of statistical inference. Our approach to statistical inference will be through a statistical model. At the bare minimum, we need a few distributional assumptions on the errors. However, we’ll focus on full model assumptions under Gaussianity.  
+
+For this lecture we are going to use the `diamond` dataset from `UsingR` package.
+
+##### Case 1 -- Without Centering Data
+
+```{r}
+# Loading Diamond dataset in Environment.
+data("diamond")
+
+# Printing the structure
+str(diamond)
+```
+
+Now that we know the variables' names let's create a linear regression to explain the price (in SIN units -- Singapore Dollar) by the diamond carats.
+
+```{r}
+# Calculating the linear regression with intercept.
+#
+# lm(formula = 'What we want to explain' ~ 'What we think is a good estimator' )
+#
+# If we do not want intercept just add -1
+#
+# lm(formula = 'What we want to explain' ~ 'What we think is a good estimator' - 1 ) # With no intercept
+#
+fit <- lm(data = diamond, formula = price ~ carat)
+
+# Printing results.
+fit$coefficients
+```
+**Explanation/Interpretation**
+
+> We estimate an expected 3721.02 SIN dollar increase in price for every carat increase in mass of diamond, and.
+> The intercept -259.63 the expected price of a 0 carat diamond.
+
+**WARNING**
+
+It is hard to believe in paying 259.63 SIN for a diamond with 0 carats.
+
+##### Case 2 -- Centering Data
+
+At this time, we are "centering" the dataset on creating an interpretable model. We only need to center the carat variable.
+
+```{r}
+# We do not have problem with price variable.
+price <- diamond$price
+
+# Centering carat variable.
+carat_c <- diamond$carat - mean(diamond$carat)
+
+# Fitting a new linear model
+fit2 <- lm(formula = price ~ carat_c, data = data.frame("prince" = price, "carat_c" = carat_c))
+
+# Printing the coefficients
+fit2$coefficients
+```
+
+**Explanation/Interpretation**
+
+> * Notice the estimated slope didn’t change at all.
+>   * We estimate an expected 3721.02 SIN dollar increase in price for every carat increase in mass of diamond, and;
+> * Thus 500.1 SIN is the expected price for the averae sized diamond of the data (0.2042 carats).
+
+#### Predicting based on a fitted model
+
+**Using model `fit`**
+
+```{r}
+# Sample of 3 diamonds with x carats.
+newx <- c(0.16, 0.27, 0.34)
+
+# Calculating using predict.
+predict(fit, newdata = data.frame(carat = newx))
+```
+
+**Using model `fit2`**
+
+```{r}
+# Centering the carat new sample.
+newx2 <- c(0.16, 0.27, 0.34) - mean(diamond$carat)
+
+# Calculating "manually".
+fit2$coefficients[1] + fit2$coefficients[2]*newx2
+```
+
+Now using `predict()`.
+
+```{r}
+predict(fit2, newdata = data.frame(carat_c = newx2))
+```
+
+It is important to keep the `newdata` column name in accordance with the `data` used in `lm()`.
+
+#### Residuals
+
+> **Residuals represent variation left unexplained by our model.** We emphasize the difference between residuals and errors. The errors unobservable true errors from the known coefficients, while residuals are the observable errors from the estimated coefficients. In a sense, the residuals are estimates of the errors.  
+
+My model:
+
+$$Y_i = \beta_O + \beta_1 \cdot X_i + \epsilon_i$$
+
+Where:
+
+* $\epsilon_i$ is the error in $i$ observation.
+
+Assuming the notation $\hat Y_i$ to the predicted value to $i$ observation.
+
+$$\epsilon_i = Y_i - \hat Y_i$$
+
+So $\epsilon_i \thicksim N(0,\sigma^2)$.
+
+```{r}
+data(diamond)
+y <- diamond$price; x <- diamond$carat; n <- length(y)
+fit <- lm(y ~ x)
+## The easiest way to get the residuals
+e <- resid(fit)
+## Obtain the residuals manually, get the predicted Ys first
+yhat <- predict(fit)
+## The residuals are y - yhat. Let's check by comparing this
+## with R's build in resid function
+max(abs(e -(y - yhat)))
+
+## Let's do it again hard coding the calculation of Yhat
+max(abs(e - (y - coef(fit)[1] - coef(fit)[2] * x)))
+```
