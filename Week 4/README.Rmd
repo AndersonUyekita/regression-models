@@ -38,10 +38,10 @@ library(lubridate)
 
 #### Slides
 
-* R Markdown
-* Types of Data Science Questions
-* Experimental Design
-* Big Data
+* Module 4 -- Logistic Regression and Poisson Regression
+    * Logistic Regression
+    * Poisson Regression
+    * Hodgepodge
 
 #### Description
 
