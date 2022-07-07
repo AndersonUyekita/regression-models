@@ -38,10 +38,11 @@ library(lubridate)
 
 #### Slides
 
-* Version Control
-* Github and Git
-* Linking Github and R Studio
-* Projects under Version Control
+* Module 3 -- Multivariable Regression, Residuals, & Diagnostics
+    * 03_01 GLMs
+    * 03_02 Binary outcomes
+    * 03_03 Count outcomes
+    * 03_04 Olio
 
 #### Description
 
