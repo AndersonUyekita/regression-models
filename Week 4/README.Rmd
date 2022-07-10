@@ -51,3 +51,61 @@ library(lubridate)
 
 ## Class Notes
 
+### Generalized linear models (GLMs)
+
+>The generalized linear model is family of models that includes linear models. By extending the family, it handles many of the issues with linear models, **but at the expense of some complexity and loss of some of the mathematical tidiness**. A GLM involves three components
+>
+> * An exponential family model for the response.
+> * A systematic component via a linear predictor.
+> * A link function that connects the means of the response to the linear predictor.
+>
+> The three most famous cases of GLMs are:
+
+* linear models, binomial and
+* binary regression and Poisson regression.
+
+>We’ll go through the GLM model specification and likelihood for all three. For linear models, we’ve developed them previously.
+>
+>The next two modules will be devoted to binomial and Poisson regression. We’ll only focus on the most popular and useful link functions.
+
+### Logistic regression
+
+>Binary GLMs come from trying to model outcomes **that can take only two values**.
+>
+>Some examples include: survival or not
+>
+>At the end of a study, winning versus losing of a team and success versus failure of a treatment or product. Often these outcomes are called Bernoulli outcomes, from the Bernoulli distribution named after the famous probabilist and mathematician.
+>
+>If we happen to have several exchangeable binary outcomes for the same level of covariate values, then that is binomial data and we can aggregate the 0’s and 1’s into the count of 1’s. As an example, imagine if we sprayed insect pests with 4 different pesticides and counted whether they died or not. Then for each spray, we could summarize the data with the count of dead and total number that were sprayed and treat the data as binomial rather than Bernoulli.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Poisson Regression
+
+>Many data take the form of unbounded count data. For example, consider the number of calls to a call center or the number of flu cases in an area or the number of hits to a web site.
+>
+>In some cases the counts are clearly bounded. However, modeling the counts as unbounded is often done when the upper limit is not known or very large relative to the number of events.
+>
+>If the upper bound is known, the techniques we’re discussing can be used to model the proportion or rate. The starting point for most count analysis is the the Poisson distribution.
+>
+>In the following lectures, we go over some of the basics of modeling count data.
+
+
+
+### Mishmash
+
+> This lecture is a bit of an mishmash of interesting things that one can accomplish with linear models.
+
