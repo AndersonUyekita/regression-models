@@ -33,7 +33,7 @@ library(lubridate)
 
 #### Assignments & Deliverables
 
-* [&#x1F680; Course Project 1 Repository](https://github.com/AndersonUyekita/regression-models_course-project-1)
+* [&#x1F680; Course Project 1 Repository](https://github.com/AndersonUyekita/regression-models_course-project)
 * [&#x1F4DD; Quiz 1](./Week 1/quiz-1_regression-models.md)
 * [&#x1F4DD; Quiz 2](./Week 2/quiz-2_regression-models.md)
 * [&#x1F4DD; Quiz 3](./Week 3/quiz-3_regression-models.md)
@@ -93,7 +93,3 @@ The book [&#x1F4D4; Regression Models for Data Science in R](./book/regression-m
 #### Course Projects
 
 > The Course Project is an opportunity to demonstrate the skills you have learned during the course. It is graded through peer assessment. You must earn a grade of at least 80% to pass the peer assessment.
-
-
-
-
