@@ -11,8 +11,8 @@ params:
   specialization_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
   instructor: 'Brian Caffo'
   course_start: !r lubridate::ymd('2022/07/05', tz = 'America/Sao_Paulo')
-  course_finish: !r lubridate::today(tzone = "America/Sao_Paulo")
-  certificate_url: './'
+  course_finish: !r lubridate::ymd('2022/07/12', tz = 'America/Sao_Paulo')
+  certificate_url: 'https://www.coursera.org/account/accomplishments/certificate/G3T94H7QL4HK'
 ---
 
 ```{r setup,include=FALSE}
