@@ -18,7 +18,7 @@ params:
   specialization_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
   instructor: 'Brian Caffo'
   course_start: !r lubridate::ymd('2022/07/05', tz = 'America/Sao_Paulo')
-  course_finish: !r lubridate::today(tzone = "America/Sao_Paulo")
+  course_finish: !r lubridate::ymd('2022/07/18', tz = 'America/Sao_Paulo')
   week: ' Week 2'
 always_allow_html: true
 ---
@@ -42,16 +42,252 @@ library(lubridate)
 
 ## Question 1
 
+Consider the following data with x as the predictor and y as as the outcome.
+
+```{r}
+x <- c(0.61, 0.93, 0.83, 0.35, 0.54, 0.16, 0.91, 0.62, 0.62)
+y <- c(0.67, 0.84, 0.6, 0.18, 0.85, 0.47, 1.1, 0.65, 0.36)
+```
+
+Give a P-value for the two sided hypothesis test of whether 
+
+- [x] 0.05296
+- [ ] 2.325
+- [ ] 0.025
+- [ ] 0.391
+
+**Answer**
+
+```{r}
+# Creating a data frame.
+df_q1 <- data.frame(x, y)
+
+# Fitting a model.
+fit_q1 <- lm(data = df_q1, formula = y ~ x)
+
+# Printing the coefficients.
+summary(fit_q1)$coeff
+```
+
+The `p-value` for $\beta_1$ is 0.05296.
 
 ## Question 2
 
+Consider the previous problem, give the estimate of the residual standard deviation.
+
+- [ ] 0.4358
+- [ ] 0.05296
+- [ ] 0.3552
+- [x] 0.223
+
+**Answer**
+
+```{r}
+summary(fit_q1)$sigma
+```
 
 ## Question 3
 
+In the `mtcars` data set, fit a linear regression model of weight (predictor) on mpg (outcome). Get a 95% confidence interval for the expected mpg at the average weight. What is the lower endpoint?
+
+- [ ] -6.486
+- [ ] -4.00
+- [ ] 21.190
+- [x] 18.991
+
+**Answer**
+
+It is necessary to center the weight (subtracting the mean of each element of wt)
+
+```{r}
+# Creating the data frame
+df_q3 <- data.frame(mpg = mtcars$mpg,
+                    wt_c = mtcars$wt - mean(mtcars$wt))
+
+# Fitting the model.
+fit_q3 <- lm(data = df_q3, formula = mpg ~ wt_c)
+
+# Calculating the Confidence Interval.
+confint(object = fit_q3, level = 0.95)
+```
 
 ## Question 4
 
+Refer to the previous question. Read the help file for `mtcars.` What is the weight coefficient interpreted as?
+
+- [x] The estimated expected change in mpg per 1,000 lb increase in weight.
+- [ ] The estimated expected change in mpg per 1 lb increase in weight.
+- [ ] It can't be interpreted without further information
+- [ ] The estimated 1,000 lb change in weight per 1 mpg increase.
+
+**Answer**
+
+```
+[, 6]	wt	Weight (1000 lbs)
+```
+
+The expected change in the response per unit change in the predictor.
 
 ## Question 5
 
+Consider again the `mtcars` data set and a linear regression model with mpg as predicted by weight (1,000 lbs). A new car is coming weighing 3000 pounds. Construct a 95% prediction interval for its mpg. What is the upper endpoint?
 
+- [ ] 21.25
+- [ ] -5.77
+- [ ] 14.93
+- [x] 27.57
+
+**Answer**
+
+```{r}
+# Fitting a model.
+fit_q5 <- lm(data = mtcars, formula = mpg ~ wt)
+
+# Value to be predicted.
+pred_q5 <- data.frame(wt = 3)
+
+# Based on the model fitted, let's predict.
+predict(object = fit_q5,
+        newdata = pred_q5,
+        interval = "prediction")
+```
+
+## Question 6
+
+Consider again the `mtcars` data set and a linear regression model with mpg as predicted by weight (in 1,000 lbs). A “short” ton is defined as 2,000 lbs.  Construct a  95% confidence interval for the expected change in mpg per 1 short ton increase in weight. Give the lower endpoint.
+
+- [ ] -9.000
+- [x] -12.973
+- [ ] 4.2026
+- [ ] -6.486
+
+**Answer**
+
+```{r}
+# Fitting a model based on the given short definition.
+fit_q6 <- lm(data = mtcars,
+             formula = mpg ~ I(wt/2)) # converting wt values into "short" unit
+
+# Printing the coefficients from short definition.
+summary(fit_q6)$coeff
+
+# Constructing a Confidence Interval of 95%
+confint(object = fit_q6)
+```
+
+## Question 7
+
+If my X from a linear regression is measured in centimeters and I convert it to meters what would happen to the slope coefficient?
+
+- [x] It would get multiplied by 100.
+- [ ] It would get divided by 100
+- [ ] It would get divided by 10
+- [ ] It would get  multiplied by 10
+
+**Answer**
+
+```{r}
+# Fitting a model in kg and ton
+fit_q7_kg <- lm(data = mtcars, formula = mpg ~ wt)
+fit_q7_ton <- lm(data = mtcars, formula = mpg ~ I(1000*wt))
+
+# Printing the coefficients.
+summary(fit_q7_kg)$coeff;
+summary(fit_q7_ton)$coeff
+```
+
+From the above example, when `wt` is multiplied by 1000, the coefficient is divided by 1000. So, if I converted `cm` to `m`, I will divide the by 100, and probably my coefficient will be divided by 100.
+
+## Question 8
+
+I have an outcome, $Y$, and a predictor, $X$ and fit a linear regression model with $Y = \beta_0 + \beta_1 \cdot X + \epsilon$ to obtain $\hat \beta_0$ and $\hat \beta_1$. What would be the consequence to the subsequent slope and intercept if I were to refit the model with a new regressor, $X + c$ for some constant, $c$?
+
+- [x] The new intercept would be $\hat \beta_0 - c \cdot \hat \beta_1$
+- [ ] The new slope would be $c \cdot \hat \beta_1$
+- [ ] The new intercept would be $\hat \beta_0 + c \cdot \hat \beta_1$
+- [ ] The new slope would be $\hat \beta_0 + c$
+
+**Answer**
+
+```{r}
+# Fitting a model subtracting 1 from all value of wt.
+fit_q8_minus_2 <- lm(data = mtcars, formula = mpg  ~ I(wt - 2))
+fit_q8_minus_1 <- lm(data = mtcars, formula = mpg  ~ I(wt - 1))
+fit_q8 <- lm(data = mtcars, formula = mpg  ~ wt)
+fit_q8_plus_1 <- lm(data = mtcars, formula = mpg  ~ I(wt + 1))
+fit_q8_plus_2 <- lm(data = mtcars, formula = mpg  ~ I(wt + 2))
+
+# Printing the coefficients.
+summary(fit_q8_minus_2)$coeff;
+summary(fit_q8_minus_1)$coeff;
+summary(fit_q8)$coeff;
+summary(fit_q8_plus_1)$coeff
+summary(fit_q8_plus_2)$coeff
+```
+
+The comparison:
+
+|Condition|Results|Delta|
+|:-:|:-:|:-:|
+|-2|26.596183|2 * 5.344472|
+|-1|31.940655|5.344472|
+|Baseline|37.285126|
+|+1|42.629598|-5.344472|
+|+2|47.974069|-2 * 5.344472|
+
+For each unit decreased in `wt`, there is a subtraction in the intercept in $\beta_1$ magnitude. Thus:
+
+$$\text{New intercep}t = \text{Intercept} - c \cdot \beta_1$$
+In case of $c$ equals to `2` and $\beta_1$ equals to `-5.344472`:
+
+$$\text{New Intercept} = 37.285126 - 2 \cdot (-5.344472) = 47.974069$$
+
+## Question 9
+
+Refer back to the mtcars data set with mpg as an outcome and weight (wt) as the predictor. About what is the ratio of the the sum of the squared errors, $\sum_{i=1}^{n}{(Y_i - \hat Y_1)^2}$ when comparing a model with just an intercept (denominator) to the model with the intercept and slope (numerator)?
+
+- [ ] 0.50
+- [ ] 4.00
+- [x] 0.25
+- [ ] 0.75
+
+**Answer**
+
+```{r}
+# Baseline
+fit_q9_baseline <- lm(data = mtcars, formula = mpg ~ 1)
+
+# One regressor
+fit_q9_wt <- lm(data = mtcars, formula = mpg ~ wt)
+
+# Calculating the residuals
+sse_baseline <- sum(fit_q9_baseline$residuals^2)
+sse_wt <- sum(fit_q9_wt$residuals^2)
+
+# Calculating the erros ratio
+sse_wt/sse_baseline
+```
+
+
+## Question 10
+
+Do the residuals always have to sum to 0 in linear regression?
+
+- [ ] The residuals must always sum to zero.
+- [ ] The residuals never sum to zero.
+- [x] If an intercept is included, then they will sum to 0.
+- [ ] If an intercept is included, the residuals most likely won't sum to zero.
+
+**Answer**
+
+```{r}
+# Fitting a model with and without a intercept.
+fit_q10_with_intercept <- lm(data = mtcars, formula = mpg ~ wt)
+fit_q10_without_intercept <- lm(data = mtcars, formula = mpg ~ wt -1)
+
+# Calculating the residual summation.
+print(paste("With Intercept:", sum(fit_q10_with_intercept$residuals)))
+print(paste("Without Intercept:", sum(fit_q10_without_intercept$residuals)))
+```
+
+As expected, the least squared has fitted a line to minimize the summation of the residuals.
