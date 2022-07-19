@@ -18,7 +18,7 @@ params:
   specialization_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
   instructor: 'Brian Caffo'
   course_start: !r lubridate::ymd('2022/07/05', tz = 'America/Sao_Paulo')
-  course_finish: !r lubridate::today(tzone = "America/Sao_Paulo")
+  course_finish: !r lubridate::ymd('2022/07/19', tz = 'America/Sao_Paulo')
   week: ' Week 4'
 always_allow_html: true
 ---
@@ -27,6 +27,9 @@ always_allow_html: true
 knitr::opts_chunk$set(echo = TRUE, cache = TRUE, message = FALSE, warning = FALSE)
 library(rmarkdown)
 library(lubridate)
+library(magrittr)
+library(tidyverse)
+library(ggplot2)
 ```
 
 `r if(!knitr::is_html_output()) {sprintf(fmt = "* &#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Author: %s", params$author)}`
@@ -42,16 +45,226 @@ library(lubridate)
 
 ## Question 1
 
+Consider the space shuttle data `?shuttle` in the $MASS$ library. Consider modeling the use of the autolander as the outcome (variable name **use**). Fit a logistic regression model with autolander (variable auto) use (labeled as "auto" 1) versus not (0) as predicted by wind sign (variable **wind**). Give the estimated odds ratio for autolander use comparing head winds, labeled as "head" in the variable headwind (numerator) to tail winds (denominator).
+
+- [ ] 1.327
+- [ ] 0.031
+- [x] 0.969
+- [ ] -0.031
+
+**Answer**
+
+```{r}
+# Loading MASS package to use shuttle dataset.
+library(MASS)
+
+# Exploring
+str(MASS::shuttle)
+
+# Subsetting the dataset.
+MASS::shuttle %>%
+    
+    # Selecting only use and wind variables.
+    dplyr::select(use, wind) %>%
+    
+    # Releveling the factors following the instructions.
+    mutate(use = factor(recode(use, noauto = 0, auto = 1)),
+           wind = factor(recode(wind, tail = 0, head = 1))) -> df_q1
+
+# Fitting a Logistic Regression
+fit_q1 <- glm(data = df_q1, formula = use ~ wind, family = "binomial")
+
+# Printing the coefficients.
+exp(coef(fit_q1))
+```
 
 ## Question 2
 
+Consider the previous problem. Give the estimated odds ratio for autolander use comparing head winds (numerator) to tail winds (denominator) adjusting for wind strength from the variable magn.
+
+- [ ] 1.00
+- [x] 0.969
+- [ ] 0.684
+- [ ] 1.485
+
+**Answer**
+
+```{r}
+# Loading MASS package to use shuttle dataset.
+library(MASS)
+
+# Exploring
+str(MASS::shuttle);
+
+# Subsetting the dataset.
+MASS::shuttle %>%
+    
+    # Selecting only use and wind variables.
+    dplyr::select(use, wind, magn) %>%
+    
+    # Releveling the factors following the instructions.
+    mutate(use = factor(recode(use, noauto = 0, auto = 1)),
+           wind = factor(recode(wind, tail = 0, head = 1))) -> df_q2
+
+# Fitting a Logistic Regression
+fit_q2 <- glm(data = df_q2, formula = use ~ wind + magn, family = "binomial")
+
+# Printing the summary
+summary(fit_q2)$coeff;
+
+# Printing the coefficients.
+exp(coef(fit_q2))
+```
 
 ## Question 3
 
+If you fit a logistic regression model to a binary variable, for example use of the autolander, then fit a logistic regression model for one minus the outcome (not using the autolander) what happens to the coefficients?
+
+- [x] The coefficients reverse their signs.
+- [ ] The intercept changes sign, but the other coefficients don't.
+- [ ] The coefficients change in a non-linear fashion.
+- [ ] The coefficients get inverted (one over their previous value).
+
+**Answer**
+
+```{r}
+# Loading MASS package to use shuttle dataset.
+library(MASS)
+
+# Exploring
+str(MASS::shuttle);
+
+# Subsetting the dataset.
+MASS::shuttle %>%
+    
+    # Selecting only use and wind variables.
+    dplyr::select(use, wind) %>%
+    
+    # Releveling the factors following the instructions.
+    mutate(use = factor(recode(use, noauto = 1, auto = 0)),
+           wind = factor(recode(wind, tail = 0, head = 1))) -> df_q3
+
+# Fitting a Logistic Regression
+fit_q3_a <- glm(data = df_q3, formula = use ~ wind, family = "binomial")
+fit_q3_b <- glm(data = df_q1, formula = use ~ wind, family = "binomial")
+
+# Printing the coefficients.
+coef(fit_q3_a);coef(fit_q3_b)
+```
+
+The expression $y = 1 - x$ converts 0 into 1 and 1 into 0. So I have changed the recode function to `wind` variable. Following the instructions, I have changed the wind (not the autolander).
 
 ## Question 4
+
+Consider the insect spray data $InsectSprays$. Fit a Poisson model using spray as a factor level. Report the estimated relative rate comapring spray A (numerator) to spray B (denominator).
+
+- [ ] -0.056
+- [ ] 0.321
+- [x] 0.9457
+- [ ] 0.136
+
+**Answer**
+
+```{r}
+# Exploring Insect Spray dataset.
+str(InsectSprays)
+
+# Releveling the spray variable.
+df_q4 <- InsectSprays %>%
+    mutate(spray = fct_relevel(spray, c("B", "A", "C", "D", "E", "F")))
+
+# Fitting the model.
+fit_q4 <- glm(data = df_q4, formula = count ~ spray, family = "poisson")
+
+# Printing the coefficients.
+exp(coef(fit_q4))
+```
+
+The spray B is the baseline, so every spray coefficient is based on it. For this reason, the relative rate comparison between A and B is 0.9456522.
 
 
 ## Question 5
 
+Consider a Poisson glm with an offset, $t$. So, for example, a model of the form $glm(count ~ x + offset(t), family = poisson)$ where $x$ is a factor variable comparing a treatment (1) to a control (0) and $t$ is the natural log of a monitoring time. What is impact of the coefficient for $x$ if we fit the model $glm(count ~ x + offset(t2), family = poisson)$ where $t2 <- log(10) + t$? In other words, what happens to the coefficients if we change the units of the offset variable.
 
+_(Note, adding log(10) on the log scale is multiplying by 10 on the original scale.)_
+
+- [ ] The coefficient is subtracted by log(10).
+- [ ] The coefficient estimate is divided by 10.
+- [x] The coefficient estimate is unchanged
+- [ ] The coefficient estimate is multiplied by 10.
+
+**Answer**
+
+```{r}
+# Selecting a dataset with treatment and control groups.
+df_q5 <- datasets::PlantGrowth %>%
+    filter(group %in% c("ctrl", "trt1"))
+
+# Fitting the model - "t"
+fit_q5_1 <- glm(data = df_q5, formula = weight ~ group, family = poisson, offset = log(weight))
+
+# Fitting the model - "t2"
+fit_q5_2 <- glm(data = df_q5, formula = weight ~ group, family = poisson, offset = log(weight) + log(10))
+
+# Comparing the results.
+coef(fit_q5_1);coef(fit_q5_2)
+```
+
+The slope is unchanged.
+
+
+## Question 6
+
+Consider the data
+
+```{r}
+x <- -5:5
+y <- c(5.12, 3.93, 2.67, 1.87, 0.52, 0.08, 0.93, 2.05, 2.54, 3.87, 4.97)
+```
+
+Using a knot point at 0, fit a linear model that looks like a hockey stick with two lines meeting at x=0. Include an intercept term, x and the knot point term. What is the estimated slope of the line after 0?
+
+- [ ] -1.024
+- [x] 1.013
+- [ ] -0.183
+- [ ] 2.037
+
+**Answer**
+
+```{r}
+# Creating the hockey stick with lines meeting in x = 0
+stick <- abs(-5:5)
+
+# Creating the data frame.
+df_q6 <- data.frame(stick, x, y)
+
+
+# Fitting a linear model.
+fit_q6 <- lm(data = df_q6, formula = y ~ x + stick)
+
+# Printing the coefficients.
+summary(fit_q6)$coeff
+```
+
+$$y = \beta_0 + \beta_1 \cdot x + \beta_2 \cdot stick$$
+
+$$y = -0.1825 -0.0055 \cdot x + 1.018612903 \cdot stick$$
+
+stick = 0
+
+$$y = -0.1825 -0.0055 \cdot x$$
+
+stick = 1 (after the x = ZERO)
+
+$$y = -0.1825 + 1.013067 \cdot x $$
+
+Printing the value in a ggplot2.
+
+```{r}
+ggplot(data = df_q6, aes(x = x, y = y)) + 
+    geom_point(color = "#F8766D") + 
+    geom_line(aes(x = x, y = stick), color = "#619CFF") + 
+    ggtitle(label = "Hockey Stick Lines in Blue", subtitle = "y is the red points")
+
+```
