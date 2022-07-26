@@ -11,7 +11,7 @@ params:
   specialization_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
   instructor: 'Brian Caffo'
   course_start: !r lubridate::ymd('2022/07/05', tz = 'America/Sao_Paulo')
-  course_finish: !r lubridate::ymd('2022/07/12', tz = 'America/Sao_Paulo')
+  course_finish: !r lubridate::ymd('2022/07/25', tz = 'America/Sao_Paulo')
   certificate_url: 'https://www.coursera.org/account/accomplishments/certificate/G3T94H7QL4HK'
 ---
 
@@ -34,6 +34,7 @@ library(lubridate)
 #### Assignments & Deliverables
 
 * [&#x1F680; Course Project 1 Repository](https://github.com/AndersonUyekita/regression-models_course-project)
+* [&#x1F3CB; Practice Quiz](https://github.com/AndersonUyekita/regression-models_practice_quiz)
 * [&#x1F4DD; Quiz 1](./Week 1/quiz-1_regression-models.md)
 * [&#x1F4DD; Quiz 2](./Week 2/quiz-2_regression-models.md)
 * [&#x1F4DD; Quiz 3](./Week 3/quiz-3_regression-models.md)

@@ -11,7 +11,7 @@ Regression Models
     target="_blank" rel="noopener">Regression Models</a>
     -   🧑‍🏫 Instructor: Brian Caffo
     -   🚦 Start: Tuesday, 05 July 2022
-    -   🏁 Finish: Tuesday, 12 July 2022
+    -   🏁 Finish: Monday, 25 July 2022
 -   🎓
     [Certificate](https://www.coursera.org/account/accomplishments/certificate/G3T94H7QL4HK)
 
@@ -21,6 +21,8 @@ Regression Models
 
 -   [🚀 Course Project 1
     Repository](https://github.com/AndersonUyekita/regression-models_course-project)
+-   [🏋 Practice
+    Quiz](https://github.com/AndersonUyekita/regression-models_practice_quiz)
 -   [📝 Quiz 1](./Week%201/quiz-1_regression-models.md)
 -   [📝 Quiz 2](./Week%202/quiz-2_regression-models.md)
 -   [📝 Quiz 3](./Week%203/quiz-3_regression-models.md)
