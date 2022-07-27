@@ -3,16 +3,16 @@
 
 -   👨🏻‍💻 Author: Anderson H Uyekita
 -   📚 Specialization: <a
-    href="https://www.coursera.org/specializations/data-science-foundations-r"
-    target="_blank" rel="noopener">Data Science: Foundations using R
-    Specialization</a>
+    href="https://www.coursera.org/specializations/data-science-statistics-machine-learning"
+    target="_blank" rel="noopener">Data Science: Statistics and Machine
+    Learning Specialization</a>
 -   📖 Course:
     <a href="https://www.coursera.org/learn/regression-models"
     target="_blank" rel="noopener">Regression Models</a>
     -   🧑‍🏫 Instructor: Brian Caffo
 -   📆 Week 2
     -   🚦 Start: Tuesday, 05 July 2022
-    -   🏁 Finish: Thursday, 07 July 2022
+    -   🏁 Finish: Monday, 18 July 2022
 
 ------------------------------------------------------------------------
 
@@ -98,7 +98,7 @@ fit$coefficients
 **WARNING**
 
 Although we have **Rejected**
-![H_0:\\beta = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_0%3A%5Cbeta%20%3D%200 "H_0:\beta = 0"),
+![H_0:\beta = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_0%3A%5Cbeta%20%3D%200 "H_0:\beta = 0"),
 it is hard to believe in paying 259.63 SIN for a diamond with 0 carats.
 It is not possible to explain it.
 
@@ -183,25 +183,25 @@ It is important to keep the `newdata` column name in accordance with the
 
 My model:
 
-![Y_i = \\beta_O + \\beta_1 \\cdot X_i + \\epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_O%20%2B%20%5Cbeta_1%20%5Ccdot%20X_i%20%2B%20%5Cepsilon_i "Y_i = \beta_O + \beta_1 \cdot X_i + \epsilon_i")
+![Y_i = \beta_O + \beta_1 \cdot X_i + \epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_O%20%2B%20%5Cbeta_1%20%5Ccdot%20X_i%20%2B%20%5Cepsilon_i "Y_i = \beta_O + \beta_1 \cdot X_i + \epsilon_i")
 
 Where:
 
--   ![\\epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cepsilon_i "\epsilon_i")
+-   ![\epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cepsilon_i "\epsilon_i")
     is the error in
     ![i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;i "i")
     observation.
 
 Assuming the notation
-![\\hat Y_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20Y_i "\hat Y_i")
+![\hat Y_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20Y_i "\hat Y_i")
 to the predicted value to
 ![i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;i "i")
 observation.
 
-![\\epsilon_i = Y_i - \\hat Y_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cepsilon_i%20%3D%20Y_i%20-%20%5Chat%20Y_i "\epsilon_i = Y_i - \hat Y_i")
+![\epsilon_i = Y_i - \hat Y_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cepsilon_i%20%3D%20Y_i%20-%20%5Chat%20Y_i "\epsilon_i = Y_i - \hat Y_i")
 
 So
-![\\epsilon_i \\thicksim N(0,\\sigma^2)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cepsilon_i%20%5Cthicksim%20N%280%2C%5Csigma%5E2%29 "\epsilon_i \thicksim N(0,\sigma^2)").
+![\epsilon_i \thicksim N(0,\sigma^2)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cepsilon_i%20%5Cthicksim%20N%280%2C%5Csigma%5E2%29 "\epsilon_i \thicksim N(0,\sigma^2)").
 
 ##### Example calculating residual
 
@@ -337,7 +337,7 @@ must be adjusted to extract this sinusoidal part.
 ##### Residual Variance
 
 Residual Variance is the
-![\\sigma^2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csigma%5E2 "\sigma^2").
+![\sigma^2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csigma%5E2 "\sigma^2").
 
 ``` r
 # Modeling
@@ -391,11 +391,11 @@ summary(lm(data = diamond, price ~ carat))$r.squared
 
     ## [1] 0.9782608
 
-![\\text{Total variability} = \\text{Residual variability} + \\text{Regression variability}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BTotal%20variability%7D%20%3D%20%5Ctext%7BResidual%20variability%7D%20%2B%20%5Ctext%7BRegression%20variability%7D "\text{Total variability} = \text{Residual variability} + \text{Regression variability}")
+![\text{Total variability} = \text{Residual variability} + \text{Regression variability}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BTotal%20variability%7D%20%3D%20%5Ctext%7BResidual%20variability%7D%20%2B%20%5Ctext%7BRegression%20variability%7D "\text{Total variability} = \text{Residual variability} + \text{Regression variability}")
 
 Where
 
-![\\text{Regression variability} = \\sum\_{i=1}^{n}{\\Big( Y_i - \\hat Y_i \\Big)^2}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BRegression%20variability%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7B%5CBig%28%20Y_i%20-%20%5Chat%20Y_i%20%5CBig%29%5E2%7D "\text{Regression variability} = \sum_{i=1}^{n}{\Big( Y_i - \hat Y_i \Big)^2}")
+![\text{Regression variability} = \sum\_{i=1}^{n}{\Big( Y_i - \hat Y_i \Big)^2}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BRegression%20variability%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7B%5CBig%28%20Y_i%20-%20%5Chat%20Y_i%20%5CBig%29%5E2%7D "\text{Regression variability} = \sum_{i=1}^{n}{\Big( Y_i - \hat Y_i \Big)^2}")
 
 ``` r
 # Calculating the Regression variability
@@ -419,22 +419,22 @@ sum(e_total^2) - sum(e_lm^2)
 
 According to:
 
-![\\frac{\\hat \\theta - \\theta}{\\hat \\sigma\_{\\hat \\theta}}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cfrac%7B%5Chat%20%5Ctheta%20-%20%5Ctheta%7D%7B%5Chat%20%5Csigma_%7B%5Chat%20%5Ctheta%7D%7D "\frac{\hat \theta - \theta}{\hat \sigma_{\hat \theta}}")
+![\frac{\hat \theta - \theta}{\hat \sigma\_{\hat \theta}}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cfrac%7B%5Chat%20%5Ctheta%20-%20%5Ctheta%7D%7B%5Chat%20%5Csigma_%7B%5Chat%20%5Ctheta%7D%7D "\frac{\hat \theta - \theta}{\hat \sigma_{\hat \theta}}")
 
 We have the properties:
 
 > -   They are normally distributed and have a finite sample Student’s T
 >     distribution under normality assumptions.
 > -   They can be used to test:
->     -   ![H_0 : \\theta = \\theta_0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_0%20%3A%20%5Ctheta%20%3D%20%5Ctheta_0 "H_0 : \theta = \theta_0")
+>     -   ![H_0 : \theta = \theta_0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_0%20%3A%20%5Ctheta%20%3D%20%5Ctheta_0 "H_0 : \theta = \theta_0")
 >         and
->         ![H_a : \\theta \>,\\neq,\< \\theta_0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_a%20%3A%20%5Ctheta%20%3E%2C%5Cneq%2C%3C%20%5Ctheta_0 "H_a : \theta >,\neq,< \theta_0")
+>         ![H_a : \theta \>,\neq,\< \theta_0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_a%20%3A%20%5Ctheta%20%3E%2C%5Cneq%2C%3C%20%5Ctheta_0 "H_a : \theta >,\neq,< \theta_0")
 > -   They can be used to create a confidence interval
->     ![\\theta](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctheta "\theta")
+>     ![\theta](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctheta "\theta")
 >     via
->     ![\\hat \\theta \\pm Q\_{1-\\frac{\\alpha}{2}} \\cdot \\hat \\sigma\_{\\hat \\theta}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Ctheta%20%5Cpm%20Q_%7B1-%5Cfrac%7B%5Calpha%7D%7B2%7D%7D%20%5Ccdot%20%5Chat%20%5Csigma_%7B%5Chat%20%5Ctheta%7D "\hat \theta \pm Q_{1-\frac{\alpha}{2}} \cdot \hat \sigma_{\hat \theta}")
+>     ![\hat \theta \pm Q\_{1-\frac{\alpha}{2}} \cdot \hat \sigma\_{\hat \theta}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Ctheta%20%5Cpm%20Q_%7B1-%5Cfrac%7B%5Calpha%7D%7B2%7D%7D%20%5Ccdot%20%5Chat%20%5Csigma_%7B%5Chat%20%5Ctheta%7D "\hat \theta \pm Q_{1-\frac{\alpha}{2}} \cdot \hat \sigma_{\hat \theta}")
 >     where
->     ![Q\_{1-\\frac{\\alpha}{2}}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Q_%7B1-%5Cfrac%7B%5Calpha%7D%7B2%7D%7D "Q_{1-\frac{\alpha}{2}}")
+>     ![Q\_{1-\frac{\alpha}{2}}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Q_%7B1-%5Cfrac%7B%5Calpha%7D%7B2%7D%7D "Q_{1-\frac{\alpha}{2}}")
 >     is the relevant quantile from either a normal or T distribution.
 
 Let’s calculate the fit model.
@@ -458,26 +458,26 @@ fit_summary$coefficients
 > error rate.
 
 For this example, the p-value is very low (less then
-![\\alpha](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Calpha "\alpha")),
+![\alpha](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Calpha "\alpha")),
 so we **Reject**
-![H_0 : \\beta_1 = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_0%20%3A%20%5Cbeta_1%20%3D%200 "H_0 : \beta_1 = 0"),
+![H_0 : \beta_1 = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_0%20%3A%20%5Cbeta_1%20%3D%200 "H_0 : \beta_1 = 0"),
 which means there is a linear relation. However, if we **Failed to
 Reject**
-![H_O : \\beta_1 = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_O%20%3A%20%5Cbeta_1%20%3D%200 "H_O : \beta_1 = 0"),
+![H_O : \beta_1 = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_O%20%3A%20%5Cbeta_1%20%3D%200 "H_O : \beta_1 = 0"),
 so there is no linear relation, because the **slope is zero**.
 
 Concerning the intercept, there is the same understanding. If we Reject
 the
-![H_1 : \\beta_0 = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_1%20%3A%20%5Cbeta_0%20%3D%200 "H_1 : \beta_0 = 0"),
+![H_1 : \beta_0 = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_1%20%3A%20%5Cbeta_0%20%3D%200 "H_1 : \beta_0 = 0"),
 there is an intercept different from zero. Although, if we **Failed to
 Reject**
-![H_0 : \\beta_0 = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_0%20%3A%20%5Cbeta_0%20%3D%200 "H_0 : \beta_0 = 0"),
+![H_0 : \beta_0 = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_0%20%3A%20%5Cbeta_0%20%3D%200 "H_0 : \beta_0 = 0"),
 the intercept is zero.
 
 Now we have all values it is possible to calculate the Confidence
 Interval.
 
-![\\text{Intercept} \\pm quantile\_{1-\\frac{\\alpha}{2}} \\cdot \\sigma\_{error}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BIntercept%7D%20%5Cpm%20quantile_%7B1-%5Cfrac%7B%5Calpha%7D%7B2%7D%7D%20%5Ccdot%20%5Csigma_%7Berror%7D "\text{Intercept} \pm quantile_{1-\frac{\alpha}{2}} \cdot \sigma_{error}")
+![\text{Intercept} \pm quantile\_{1-\frac{\alpha}{2}} \cdot \sigma\_{error}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BIntercept%7D%20%5Cpm%20quantile_%7B1-%5Cfrac%7B%5Calpha%7D%7B2%7D%7D%20%5Ccdot%20%5Csigma_%7Berror%7D "\text{Intercept} \pm quantile_{1-\frac{\alpha}{2}} \cdot \sigma_{error}")
 
 Calculating in R.
 

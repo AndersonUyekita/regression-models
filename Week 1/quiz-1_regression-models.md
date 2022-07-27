@@ -3,9 +3,9 @@
 
 -   👨🏻‍💻 Author: Anderson H Uyekita
 -   📚 Specialization: <a
-    href="https://www.coursera.org/specializations/data-science-foundations-r"
-    target="_blank" rel="noopener">Data Science: Foundations using R
-    Specialization</a>
+    href="https://www.coursera.org/specializations/data-science-statistics-machine-learning"
+    target="_blank" rel="noopener">Data Science: Statistics and Machine
+    Learning Specialization</a>
 -   📖 Course:
     <a href="https://www.coursera.org/learn/regression-models"
     target="_blank" rel="noopener">Regression Models</a>
@@ -33,10 +33,10 @@ w <- c(2, 1, 3, 1)
 ```
 
 Give the value of
-![\\mu](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmu "\mu")
+![\mu](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmu "\mu")
 that minimizes the least squares equation
 
-![\\sum\_{i = 1}^{n}{w_i \\cdot (x_i - \\mu)^2}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csum_%7Bi%20%3D%201%7D%5E%7Bn%7D%7Bw_i%20%5Ccdot%20%28x_i%20-%20%5Cmu%29%5E2%7D "\sum_{i = 1}^{n}{w_i \cdot (x_i - \mu)^2}")
+![\sum\_{i = 1}^{n}{w_i \cdot (x_i - \mu)^2}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csum_%7Bi%20%3D%201%7D%5E%7Bn%7D%7Bw_i%20%5Ccdot%20%28x_i%20-%20%5Cmu%29%5E2%7D "\sum_{i = 1}^{n}{w_i \cdot (x_i - \mu)^2}")
 
 -   [ ] 0.300
 -   [x] 0.1471
@@ -46,11 +46,11 @@ that minimizes the least squares equation
 **Answer**
 
 The
-![\\mu](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmu "\mu")
+![\mu](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmu "\mu")
 value that minimizes the given function should be the mean. For this
 reason, I will calculate the weighted average.
 
-![\\mu = \\frac{\\sum{x_i \\cdot w_i}}{\\sum{w_i}}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmu%20%3D%20%5Cfrac%7B%5Csum%7Bx_i%20%5Ccdot%20w_i%7D%7D%7B%5Csum%7Bw_i%7D%7D "\mu = \frac{\sum{x_i \cdot w_i}}{\sum{w_i}}")
+![\mu = \frac{\sum{x_i \cdot w_i}}{\sum{w_i}}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmu%20%3D%20%5Cfrac%7B%5Csum%7Bx_i%20%5Ccdot%20w_i%7D%7D%7B%5Csum%7Bw_i%7D%7D "\mu = \frac{\sum{x_i \cdot w_i}}{\sum{w_i}}")
 
 ``` r
 # Calculating the weighted average.
@@ -144,17 +144,17 @@ as the predictor?
 **Answer**
 
 From the given formula (1) to calculate the
-![\\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1").
+![\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1").
 
-![\\beta_1 = \\frac{Cov(Y,X)}{(sd(X))^2}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1%20%3D%20%5Cfrac%7BCov%28Y%2CX%29%7D%7B%28sd%28X%29%29%5E2%7D "\beta_1 = \frac{Cov(Y,X)}{(sd(X))^2}")
+![\beta_1 = \frac{Cov(Y,X)}{(sd(X))^2}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1%20%3D%20%5Cfrac%7BCov%28Y%2CX%29%7D%7B%28sd%28X%29%29%5E2%7D "\beta_1 = \frac{Cov(Y,X)}{(sd(X))^2}")
 
 The Correlation is given by the follow formula (2):
 
-![Cor(Y,X) = \\frac{Cov(Y,X)}{sd(X) \\cdot sd(Y)}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Cor%28Y%2CX%29%20%3D%20%5Cfrac%7BCov%28Y%2CX%29%7D%7Bsd%28X%29%20%5Ccdot%20sd%28Y%29%7D "Cor(Y,X) = \frac{Cov(Y,X)}{sd(X) \cdot sd(Y)}")
+![Cor(Y,X) = \frac{Cov(Y,X)}{sd(X) \cdot sd(Y)}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Cor%28Y%2CX%29%20%3D%20%5Cfrac%7BCov%28Y%2CX%29%7D%7Bsd%28X%29%20%5Ccdot%20sd%28Y%29%7D "Cor(Y,X) = \frac{Cov(Y,X)}{sd(X) \cdot sd(Y)}")
 
 Using the formula (2) in (1):
 
-![\\beta_1 = Cor(X,Y) \\cdot \\frac{sd(Y)}{sd(X)}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1%20%3D%20Cor%28X%2CY%29%20%5Ccdot%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D "\beta_1 = Cor(X,Y) \cdot \frac{sd(Y)}{sd(X)}")
+![\beta_1 = Cor(X,Y) \cdot \frac{sd(Y)}{sd(X)}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1%20%3D%20Cor%28X%2CY%29%20%5Ccdot%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D "\beta_1 = Cor(X,Y) \cdot \frac{sd(Y)}{sd(X)}")
 
 ``` r
 # Creating the variables
@@ -187,7 +187,7 @@ student who had a normalized score of 1.5 on Quiz 1?
 In this case of normalized data, the slope will equal the correlation.
 Due to the mean equal to zero, the intercept should be zero.
 
-![y = \\underbrace{\\beta_0}\_{\\text{Should be zero}} + \\underbrace{\\beta_1}\_{\\text{Should be equal to Cor(X,Y)}} \\cdot x](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;y%20%3D%20%5Cunderbrace%7B%5Cbeta_0%7D_%7B%5Ctext%7BShould%20be%20zero%7D%7D%20%2B%20%5Cunderbrace%7B%5Cbeta_1%7D_%7B%5Ctext%7BShould%20be%20equal%20to%20Cor%28X%2CY%29%7D%7D%20%5Ccdot%20x "y = \underbrace{\beta_0}_{\text{Should be zero}} + \underbrace{\beta_1}_{\text{Should be equal to Cor(X,Y)}} \cdot x")
+![y = \underbrace{\beta_0}\_{\text{Should be zero}} + \underbrace{\beta_1}\_{\text{Should be equal to Cor(X,Y)}} \cdot x](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;y%20%3D%20%5Cunderbrace%7B%5Cbeta_0%7D_%7B%5Ctext%7BShould%20be%20zero%7D%7D%20%2B%20%5Cunderbrace%7B%5Cbeta_1%7D_%7B%5Ctext%7BShould%20be%20equal%20to%20Cor%28X%2CY%29%7D%7D%20%5Ccdot%20x "y = \underbrace{\beta_0}_{\text{Should be zero}} + \underbrace{\beta_1}_{\text{Should be equal to Cor(X,Y)}} \cdot x")
 
 ``` r
 # Creating the regression as a function.
@@ -335,22 +335,22 @@ mean(x)
 
 Let the slope having fit Y as the outcome and X as the predictor be
 denoted as
-![\\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1").
+![\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1").
 Let the slope from fitting X as the outcome and Y as the predictor be
 denoted as
-![\\gamma_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cgamma_1 "\gamma_1").
+![\gamma_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cgamma_1 "\gamma_1").
 Suppose that you divide
-![\\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1")
+![\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1")
 by
-![\\gamma_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cgamma_1 "\gamma_1");
+![\gamma_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cgamma_1 "\gamma_1");
 in other words consider
-![\\frac{\\beta_1}{\\gamma_1}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cfrac%7B%5Cbeta_1%7D%7B%5Cgamma_1%7D "\frac{\beta_1}{\gamma_1}").
+![\frac{\beta_1}{\gamma_1}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cfrac%7B%5Cbeta_1%7D%7B%5Cgamma_1%7D "\frac{\beta_1}{\gamma_1}").
 What is this ratio always equal to?
 
 -   [x]
     ![Var(Y)/Var(X)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Var%28Y%29%2FVar%28X%29 "Var(Y)/Var(X)")
 -   [ ]
-    ![2 \\cdot sd(X)/sd(Y)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;2%20%5Ccdot%20sd%28X%29%2Fsd%28Y%29 "2 \cdot sd(X)/sd(Y)")
+    ![2 \cdot sd(X)/sd(Y)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;2%20%5Ccdot%20sd%28X%29%2Fsd%28Y%29 "2 \cdot sd(X)/sd(Y)")
 -   [ ] 1
 -   [ ]
     ![Cor(Y,X)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Cor%28Y%2CX%29 "Cor(Y,X)")
@@ -358,16 +358,16 @@ What is this ratio always equal to?
 **Answer**
 
 Given
-![\\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1"):
+![\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1"):
 
-![\\beta_1 = Cor(Y,X) \\cdot \\frac{sd(Y)}{sd(X)}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1%20%3D%20Cor%28Y%2CX%29%20%5Ccdot%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D "\beta_1 = Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}")
+![\beta_1 = Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1%20%3D%20Cor%28Y%2CX%29%20%5Ccdot%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D "\beta_1 = Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}")
 
 Given
-![\\gamma_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cgamma_1 "\gamma_1"):
+![\gamma_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cgamma_1 "\gamma_1"):
 
-![\\gamma_1 = Cor(Y,X) \\cdot \\frac{sd(Y)}{sd(X)}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cgamma_1%20%3D%20Cor%28Y%2CX%29%20%5Ccdot%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D "\gamma_1 = Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}")
+![\gamma_1 = Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cgamma_1%20%3D%20Cor%28Y%2CX%29%20%5Ccdot%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D "\gamma_1 = Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}")
 
 Calculating the
-![\\frac{\\beta_1}{\\gamma_1}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cfrac%7B%5Cbeta_1%7D%7B%5Cgamma_1%7D "\frac{\beta_1}{\gamma_1}"):
+![\frac{\beta_1}{\gamma_1}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cfrac%7B%5Cbeta_1%7D%7B%5Cgamma_1%7D "\frac{\beta_1}{\gamma_1}"):
 
-![\\frac{\\beta_1}{\\gamma_1} = \\frac{Cor(Y,X) \\cdot \\frac{sd(Y)}{sd(X)}}{Cor(Y,X) \\cdot \\frac{sd(Y)}{sd(X)}}=\\Big( \\frac{sd(Y)}{sd(X)} \\Big)^2 = \\frac{Var(Y)}{Var(X)}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cfrac%7B%5Cbeta_1%7D%7B%5Cgamma_1%7D%20%3D%20%5Cfrac%7BCor%28Y%2CX%29%20%5Ccdot%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D%7D%7BCor%28Y%2CX%29%20%5Ccdot%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D%7D%3D%5CBig%28%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D%20%5CBig%29%5E2%20%3D%20%5Cfrac%7BVar%28Y%29%7D%7BVar%28X%29%7D "\frac{\beta_1}{\gamma_1} = \frac{Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}}{Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}}=\Big( \frac{sd(Y)}{sd(X)} \Big)^2 = \frac{Var(Y)}{Var(X)}")
+![\frac{\beta_1}{\gamma_1} = \frac{Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}}{Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}}=\Big( \frac{sd(Y)}{sd(X)} \Big)^2 = \frac{Var(Y)}{Var(X)}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cfrac%7B%5Cbeta_1%7D%7B%5Cgamma_1%7D%20%3D%20%5Cfrac%7BCor%28Y%2CX%29%20%5Ccdot%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D%7D%7BCor%28Y%2CX%29%20%5Ccdot%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D%7D%3D%5CBig%28%20%5Cfrac%7Bsd%28Y%29%7D%7Bsd%28X%29%7D%20%5CBig%29%5E2%20%3D%20%5Cfrac%7BVar%28Y%29%7D%7BVar%28X%29%7D "\frac{\beta_1}{\gamma_1} = \frac{Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}}{Cor(Y,X) \cdot \frac{sd(Y)}{sd(X)}}=\Big( \frac{sd(Y)}{sd(X)} \Big)^2 = \frac{Var(Y)}{Var(X)}")

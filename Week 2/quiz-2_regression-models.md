@@ -3,9 +3,9 @@
 
 -   👨🏻‍💻 Author: Anderson H Uyekita
 -   📚 Specialization: <a
-    href="https://www.coursera.org/specializations/data-science-foundations-r"
-    target="_blank" rel="noopener">Data Science: Foundations using R
-    Specialization</a>
+    href="https://www.coursera.org/specializations/data-science-statistics-machine-learning"
+    target="_blank" rel="noopener">Data Science: Statistics and Machine
+    Learning Specialization</a>
 -   📖 Course:
     <a href="https://www.coursera.org/learn/regression-models"
     target="_blank" rel="noopener">Regression Models</a>
@@ -53,7 +53,7 @@ summary(fit_q1)$coeff
     ## x           0.7224211  0.3106531 2.3254912 0.05296439
 
 The `p-value` for
-![\\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1")
+![\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1")
 is 0.05296.
 
 ## Question 2
@@ -234,11 +234,11 @@ I have an outcome,
 and a predictor,
 ![X](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;X "X")
 and fit a linear regression model with
-![Y = \\beta_0 + \\beta_1 \\cdot X + \\epsilon](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1%20%5Ccdot%20X%20%2B%20%5Cepsilon "Y = \beta_0 + \beta_1 \cdot X + \epsilon")
+![Y = \beta_0 + \beta_1 \cdot X + \epsilon](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1%20%5Ccdot%20X%20%2B%20%5Cepsilon "Y = \beta_0 + \beta_1 \cdot X + \epsilon")
 to obtain
-![\\hat \\beta_0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Cbeta_0 "\hat \beta_0")
+![\hat \beta_0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Cbeta_0 "\hat \beta_0")
 and
-![\\hat \\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Cbeta_1 "\hat \beta_1").
+![\hat \beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Cbeta_1 "\hat \beta_1").
 What would be the consequence to the subsequent slope and intercept if I
 were to refit the model with a new regressor,
 ![X + c](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;X%20%2B%20c "X + c")
@@ -246,13 +246,13 @@ for some constant,
 ![c](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;c "c")?
 
 -   [x] The new intercept would be
-    ![\\hat \\beta_0 - c \\cdot \\hat \\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Cbeta_0%20-%20c%20%5Ccdot%20%5Chat%20%5Cbeta_1 "\hat \beta_0 - c \cdot \hat \beta_1")
+    ![\hat \beta_0 - c \cdot \hat \beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Cbeta_0%20-%20c%20%5Ccdot%20%5Chat%20%5Cbeta_1 "\hat \beta_0 - c \cdot \hat \beta_1")
 -   [ ] The new slope would be
-    ![c \\cdot \\hat \\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;c%20%5Ccdot%20%5Chat%20%5Cbeta_1 "c \cdot \hat \beta_1")
+    ![c \cdot \hat \beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;c%20%5Ccdot%20%5Chat%20%5Cbeta_1 "c \cdot \hat \beta_1")
 -   [ ] The new intercept would be
-    ![\\hat \\beta_0 + c \\cdot \\hat \\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Cbeta_0%20%2B%20c%20%5Ccdot%20%5Chat%20%5Cbeta_1 "\hat \beta_0 + c \cdot \hat \beta_1")
+    ![\hat \beta_0 + c \cdot \hat \beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Cbeta_0%20%2B%20c%20%5Ccdot%20%5Chat%20%5Cbeta_1 "\hat \beta_0 + c \cdot \hat \beta_1")
 -   [ ] The new slope would be
-    ![\\hat \\beta_0 + c](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Cbeta_0%20%2B%20c "\hat \beta_0 + c")
+    ![\hat \beta_0 + c](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%20%5Cbeta_0%20%2B%20c "\hat \beta_0 + c")
 
 **Answer**
 
@@ -316,25 +316,25 @@ The comparison:
 
 For each unit decreased in `wt`, there is a subtraction in the intercept
 in
-![\\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1")
+![\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1")
 magnitude. Thus:
 
-![\\text{New intercep}t = \\text{Intercept} - c \\cdot \\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BNew%20intercep%7Dt%20%3D%20%5Ctext%7BIntercept%7D%20-%20c%20%5Ccdot%20%5Cbeta_1 "\text{New intercep}t = \text{Intercept} - c \cdot \beta_1")
+![\text{New intercep}t = \text{Intercept} - c \cdot \beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BNew%20intercep%7Dt%20%3D%20%5Ctext%7BIntercept%7D%20-%20c%20%5Ccdot%20%5Cbeta_1 "\text{New intercep}t = \text{Intercept} - c \cdot \beta_1")
 
 In case of
 ![c](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;c "c")
 equals to `2` and
-![\\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1")
+![\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1")
 equals to `-5.344472`:
 
-![\\text{New Intercept} = 37.285126 - 2 \\cdot (-5.344472) = 47.974069](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BNew%20Intercept%7D%20%3D%2037.285126%20-%202%20%5Ccdot%20%28-5.344472%29%20%3D%2047.974069 "\text{New Intercept} = 37.285126 - 2 \cdot (-5.344472) = 47.974069")
+![\text{New Intercept} = 37.285126 - 2 \cdot (-5.344472) = 47.974069](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BNew%20Intercept%7D%20%3D%2037.285126%20-%202%20%5Ccdot%20%28-5.344472%29%20%3D%2047.974069 "\text{New Intercept} = 37.285126 - 2 \cdot (-5.344472) = 47.974069")
 
 ## Question 9
 
 Refer back to the mtcars data set with mpg as an outcome and weight (wt)
 as the predictor. About what is the ratio of the the sum of the squared
 errors,
-![\\sum\_{i=1}^{n}{(Y_i - \\hat Y_1)^2}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7B%28Y_i%20-%20%5Chat%20Y_1%29%5E2%7D "\sum_{i=1}^{n}{(Y_i - \hat Y_1)^2}")
+![\sum\_{i=1}^{n}{(Y_i - \hat Y_1)^2}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7B%28Y_i%20-%20%5Chat%20Y_1%29%5E2%7D "\sum_{i=1}^{n}{(Y_i - \hat Y_1)^2}")
 when comparing a model with just an intercept (denominator) to the model
 with the intercept and slope (numerator)?
 

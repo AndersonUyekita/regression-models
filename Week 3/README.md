@@ -3,16 +3,16 @@
 
 -   👨🏻‍💻 Author: Anderson H Uyekita
 -   📚 Specialization: <a
-    href="https://www.coursera.org/specializations/data-science-foundations-r"
-    target="_blank" rel="noopener">Data Science: Foundations using R
-    Specialization</a>
+    href="https://www.coursera.org/specializations/data-science-statistics-machine-learning"
+    target="_blank" rel="noopener">Data Science: Statistics and Machine
+    Learning Specialization</a>
 -   📖 Course:
     <a href="https://www.coursera.org/learn/regression-models"
     target="_blank" rel="noopener">Regression Models</a>
     -   🧑‍🏫 Instructor: Brian Caffo
 -   📆 Week 3
     -   🚦 Start: Tuesday, 05 July 2022
-    -   🏁 Finish: Friday, 08 July 2022
+    -   🏁 Finish: Monday, 18 July 2022
 
 ------------------------------------------------------------------------
 
@@ -288,19 +288,19 @@ Table 1 shows the interpretation process.
 
 Analyzing the t-test.
 
-![H_0 : \\beta\_{agriculture}=0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_0%20%3A%20%5Cbeta_%7Bagriculture%7D%3D0 "H_0 : \beta_{agriculture}=0")
+![H_0 : \beta\_{agriculture}=0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_0%20%3A%20%5Cbeta_%7Bagriculture%7D%3D0 "H_0 : \beta_{agriculture}=0")
 
-![H_1 : \\beta\_{agriculture} \\ne 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_1%20%3A%20%5Cbeta_%7Bagriculture%7D%20%5Cne%200 "H_1 : \beta_{agriculture} \ne 0")
+![H_1 : \beta\_{agriculture} \ne 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_1%20%3A%20%5Cbeta_%7Bagriculture%7D%20%5Cne%200 "H_1 : \beta_{agriculture} \ne 0")
 
 Due to the
-![P( \> \\vert t \\vert )](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;P%28%20%3E%20%5Cvert%20t%20%5Cvert%20%29 "P( > \vert t \vert )")
+![P( \> \vert t \vert )](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;P%28%20%3E%20%5Cvert%20t%20%5Cvert%20%29 "P( > \vert t \vert )")
 is 0.0187 or 1.87%, we **Reject** the
 ![H_0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;H_0 "H_0")
 because the
-![\\alpha](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Calpha "\alpha")
+![\alpha](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Calpha "\alpha")
 is 5%.
 
-![P( \> \\vert t \\vert ) \< 5\\%](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;P%28%20%3E%20%5Cvert%20t%20%5Cvert%20%29%20%3C%205%5C%25 "P( > \vert t \vert ) < 5\%")
+![P( \> \vert t \vert ) \< 5\\%](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;P%28%20%3E%20%5Cvert%20t%20%5Cvert%20%29%20%3C%205%5C%25 "P( > \vert t \vert ) < 5\%")
 
 For this reason, there is evidence `Agriculture` is a good predictor.
 
@@ -382,7 +382,7 @@ Case one variable is a linear combination of one or more variables, the
 
 -   Three level factors: Republican, Democrat, and Independent.
 
-![Y_i = \\beta_0 + X\_{i1} \\cdot \\beta_1 + X\_{i2} \\cdot \\beta_2 + \\epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_0%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20X_%7Bi2%7D%20%5Ccdot%20%5Cbeta_2%20%2B%20%5Cepsilon_i "Y_i = \beta_0 + X_{i1} \cdot \beta_1 + X_{i2} \cdot \beta_2 + \epsilon_i")
+![Y_i = \beta_0 + X\_{i1} \cdot \beta_1 + X\_{i2} \cdot \beta_2 + \epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_0%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20X_%7Bi2%7D%20%5Ccdot%20%5Cbeta_2%20%2B%20%5Cepsilon_i "Y_i = \beta_0 + X_{i1} \cdot \beta_1 + X_{i2} \cdot \beta_2 + \epsilon_i")
 
 As you can see, only two variables must codify those three parties.
 
@@ -397,18 +397,18 @@ variables.
 
 > So, we can interpret our coefficients as follows:
 >
-> -   ![\\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1")
+> -   ![\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1 "\beta_1")
 >     compares the mean for Republicans to that of Independents/Others.
 >     -   The mean:
->         ![E\[Y_i\] = \\beta_0 + \\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;E%5BY_i%5D%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1 "E[Y_i] = \beta_0 + \beta_1")
-> -   ![\\beta_2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_2 "\beta_2")
+>         ![E\[Y_i\] = \beta_0 + \beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;E%5BY_i%5D%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1 "E[Y_i] = \beta_0 + \beta_1")
+> -   ![\beta_2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_2 "\beta_2")
 >     compares the mean for Democrats to that of Independents/Others.
 >     -   The mean:
->         ![E\[Y_i\] = \\beta_0 + \\beta_2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;E%5BY_i%5D%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_2 "E[Y_i] = \beta_0 + \beta_2")
-> -   ![\\beta_1 - \\beta_2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1%20-%20%5Cbeta_2 "\beta_1 - \beta_2")
+>         ![E\[Y_i\] = \beta_0 + \beta_2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;E%5BY_i%5D%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_2 "E[Y_i] = \beta_0 + \beta_2")
+> -   ![\beta_1 - \beta_2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta_1%20-%20%5Cbeta_2 "\beta_1 - \beta_2")
 >     compares the mean for Republicans to that of Democrats.
 >     -   The mean:
->         ![E\[Y_i\] = \\beta_0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;E%5BY_i%5D%20%3D%20%5Cbeta_0 "E[Y_i] = \beta_0")
+>         ![E\[Y_i\] = \beta_0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;E%5BY_i%5D%20%3D%20%5Cbeta_0 "E[Y_i] = \beta_0")
 >
 > Notice the coefficients are all comparisons to the category that we
 > left out, Independents/Others.
@@ -629,7 +629,7 @@ g
 
 Defining the fit model.
 
-![Y_i = \\beta_0 + X\_{i1} \\cdot \\beta_1 + X\_{i2} \\cdot \\beta_2 + \\epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_0%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20X_%7Bi2%7D%20%5Ccdot%20%5Cbeta_2%20%2B%20%5Cepsilon_i "Y_i = \beta_0 + X_{i1} \cdot \beta_1 + X_{i2} \cdot \beta_2 + \epsilon_i")
+![Y_i = \beta_0 + X\_{i1} \cdot \beta_1 + X\_{i2} \cdot \beta_2 + \epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_0%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20X_%7Bi2%7D%20%5Ccdot%20%5Cbeta_2%20%2B%20%5Cepsilon_i "Y_i = \beta_0 + X_{i1} \cdot \beta_1 + X_{i2} \cdot \beta_2 + \epsilon_i")
 
 Where:
 
@@ -660,13 +660,13 @@ When
 ![X\_{i2} = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;X_%7Bi2%7D%20%3D%200 "X_{i2} = 0")
 or `CatholicBin = 0`:
 
-![Y_i = \\beta_0 + X\_{i1} \\cdot \\beta_1 + \\epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_0%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20%5Cepsilon_i "Y_i = \beta_0 + X_{i1} \cdot \beta_1 + \epsilon_i")
+![Y_i = \beta_0 + X\_{i1} \cdot \beta_1 + \epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_0%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20%5Cepsilon_i "Y_i = \beta_0 + X_{i1} \cdot \beta_1 + \epsilon_i")
 
 When
 ![X\_{i2} = 1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;X_%7Bi2%7D%20%3D%201 "X_{i2} = 1")
 or `CatholicBin = 1`:
 
-![Y_i = \\Big( \\beta_0 + \\beta_2 \\Big) + X\_{i1} \\cdot \\beta_1 + \\epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5CBig%28%20%5Cbeta_0%20%2B%20%5Cbeta_2%20%5CBig%29%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20%5Cepsilon_i "Y_i = \Big( \beta_0 + \beta_2 \Big) + X_{i1} \cdot \beta_1 + \epsilon_i")
+![Y_i = \Big( \beta_0 + \beta_2 \Big) + X\_{i1} \cdot \beta_1 + \epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5CBig%28%20%5Cbeta_0%20%2B%20%5Cbeta_2%20%5CBig%29%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20%5Cepsilon_i "Y_i = \Big( \beta_0 + \beta_2 \Big) + X_{i1} \cdot \beta_1 + \epsilon_i")
 
 Calculating the model.
 
@@ -687,13 +687,13 @@ When
 ![X\_{i2} = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;X_%7Bi2%7D%20%3D%200 "X_{i2} = 0")
 or `CatholicBin = 0`:
 
-![Y_i(\\text{Non-Catholic}) = 60.83 + 0.12 \\cdot \\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%28%5Ctext%7BNon-Catholic%7D%29%20%3D%2060.83%20%2B%200.12%20%5Ccdot%20%5Cbeta_1 "Y_i(\text{Non-Catholic}) = 60.83 + 0.12 \cdot \beta_1")
+![Y_i(\text{Non-Catholic}) = 60.83 + 0.12 \cdot \beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%28%5Ctext%7BNon-Catholic%7D%29%20%3D%2060.83%20%2B%200.12%20%5Ccdot%20%5Cbeta_1 "Y_i(\text{Non-Catholic}) = 60.83 + 0.12 \cdot \beta_1")
 
 When
 ![X\_{i2} = 1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;X_%7Bi2%7D%20%3D%201 "X_{i2} = 1")
 or `CatholicBin = 1`:
 
-![Y_i(\\text{Catholic}) = \\Big( 60.83 + 7.788 \\Big) + 0.12 \\cdot \\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%28%5Ctext%7BCatholic%7D%29%20%3D%20%5CBig%28%2060.83%20%2B%207.788%20%5CBig%29%20%2B%200.12%20%5Ccdot%20%5Cbeta_1 "Y_i(\text{Catholic}) = \Big( 60.83 + 7.788 \Big) + 0.12 \cdot \beta_1")
+![Y_i(\text{Catholic}) = \Big( 60.83 + 7.788 \Big) + 0.12 \cdot \beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%28%5Ctext%7BCatholic%7D%29%20%3D%20%5CBig%28%2060.83%20%2B%207.788%20%5CBig%29%20%2B%200.12%20%5Ccdot%20%5Cbeta_1 "Y_i(\text{Catholic}) = \Big( 60.83 + 7.788 \Big) + 0.12 \cdot \beta_1")
 
 Figure 1 present the two lines.
 
@@ -704,19 +704,19 @@ The model has parallel lines because the slope is the same.
 Now let’s create a new model with an interaction term. The new model
 fit:
 
-![Y_i = \\beta_0 + X\_{i1} \\cdot \\beta_1 + X\_{i2} \\cdot \\beta_2 + \\underbrace{X\_{i1} \\cdot X\_{i2} \\cdot \\beta_3}\_{\\text{interaction term}} \\epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_0%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20X_%7Bi2%7D%20%5Ccdot%20%5Cbeta_2%20%2B%20%5Cunderbrace%7BX_%7Bi1%7D%20%5Ccdot%20X_%7Bi2%7D%20%5Ccdot%20%5Cbeta_3%7D_%7B%5Ctext%7Binteraction%20term%7D%7D%20%5Cepsilon_i "Y_i = \beta_0 + X_{i1} \cdot \beta_1 + X_{i2} \cdot \beta_2 + \underbrace{X_{i1} \cdot X_{i2} \cdot \beta_3}_{\text{interaction term}} \epsilon_i")
+![Y_i = \beta_0 + X\_{i1} \cdot \beta_1 + X\_{i2} \cdot \beta_2 + \underbrace{X\_{i1} \cdot X\_{i2} \cdot \beta_3}\_{\text{interaction term}} \epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_0%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20X_%7Bi2%7D%20%5Ccdot%20%5Cbeta_2%20%2B%20%5Cunderbrace%7BX_%7Bi1%7D%20%5Ccdot%20X_%7Bi2%7D%20%5Ccdot%20%5Cbeta_3%7D_%7B%5Ctext%7Binteraction%20term%7D%7D%20%5Cepsilon_i "Y_i = \beta_0 + X_{i1} \cdot \beta_1 + X_{i2} \cdot \beta_2 + \underbrace{X_{i1} \cdot X_{i2} \cdot \beta_3}_{\text{interaction term}} \epsilon_i")
 
 When
 ![X\_{i2} = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;X_%7Bi2%7D%20%3D%200 "X_{i2} = 0")
 or `CatholicBin = 0`:
 
-![Y_i = \\beta_0 + X\_{i1} \\cdot \\beta_1 + \\epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_0%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20%5Cepsilon_i "Y_i = \beta_0 + X_{i1} \cdot \beta_1 + \epsilon_i")
+![Y_i = \beta_0 + X\_{i1} \cdot \beta_1 + \epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5Cbeta_0%20%2B%20X_%7Bi1%7D%20%5Ccdot%20%5Cbeta_1%20%2B%20%5Cepsilon_i "Y_i = \beta_0 + X_{i1} \cdot \beta_1 + \epsilon_i")
 
 When
 ![X\_{i2} = 1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;X_%7Bi2%7D%20%3D%201 "X_{i2} = 1")
 or `CatholicBin = 1`:
 
-![Y_i = \\Big( \\beta_0 + \\beta_2 \\Big) + \\underbrace{\\Big( \\beta_1 + \\beta_3 \\Big)}\_{\\text{The slope will change}} \\cdot X\_{i1} + \\epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5CBig%28%20%5Cbeta_0%20%2B%20%5Cbeta_2%20%5CBig%29%20%2B%20%5Cunderbrace%7B%5CBig%28%20%5Cbeta_1%20%2B%20%5Cbeta_3%20%5CBig%29%7D_%7B%5Ctext%7BThe%20slope%20will%20change%7D%7D%20%5Ccdot%20X_%7Bi1%7D%20%2B%20%5Cepsilon_i "Y_i = \Big( \beta_0 + \beta_2 \Big) + \underbrace{\Big( \beta_1 + \beta_3 \Big)}_{\text{The slope will change}} \cdot X_{i1} + \epsilon_i")
+![Y_i = \Big( \beta_0 + \beta_2 \Big) + \underbrace{\Big( \beta_1 + \beta_3 \Big)}\_{\text{The slope will change}} \cdot X\_{i1} + \epsilon_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20%3D%20%5CBig%28%20%5Cbeta_0%20%2B%20%5Cbeta_2%20%5CBig%29%20%2B%20%5Cunderbrace%7B%5CBig%28%20%5Cbeta_1%20%2B%20%5Cbeta_3%20%5CBig%29%7D_%7B%5Ctext%7BThe%20slope%20will%20change%7D%7D%20%5Ccdot%20X_%7Bi1%7D%20%2B%20%5Cepsilon_i "Y_i = \Big( \beta_0 + \beta_2 \Big) + \underbrace{\Big( \beta_1 + \beta_3 \Big)}_{\text{The slope will change}} \cdot X_{i1} + \epsilon_i")
 
 Calculating the model with interaction:
 
@@ -741,13 +741,13 @@ When
 ![X\_{i2} = 0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;X_%7Bi2%7D%20%3D%200 "X_{i2} = 0")
 or `CatholicBin = 0`:
 
-![Y_i(\\text{Non-Catholic}) = 62.05 + 0.09 \\cdot \\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%28%5Ctext%7BNon-Catholic%7D%29%20%3D%2062.05%20%2B%200.09%20%5Ccdot%20%5Cbeta_1 "Y_i(\text{Non-Catholic}) = 62.05 + 0.09 \cdot \beta_1")
+![Y_i(\text{Non-Catholic}) = 62.05 + 0.09 \cdot \beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%28%5Ctext%7BNon-Catholic%7D%29%20%3D%2062.05%20%2B%200.09%20%5Ccdot%20%5Cbeta_1 "Y_i(\text{Non-Catholic}) = 62.05 + 0.09 \cdot \beta_1")
 
 When
 ![X\_{i2} = 1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;X_%7Bi2%7D%20%3D%201 "X_{i2} = 1")
 or `CatholicBin = 1`:
 
-![Y_i(\\text{Catholic}) = \\Big( 62.049 + 2.857 \\Big) + \\Big( 0.096 + 0.089 \\Big) \\cdot \\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%28%5Ctext%7BCatholic%7D%29%20%3D%20%5CBig%28%2062.049%20%2B%202.857%20%5CBig%29%20%2B%20%5CBig%28%200.096%20%2B%200.089%20%5CBig%29%20%5Ccdot%20%5Cbeta_1 "Y_i(\text{Catholic}) = \Big( 62.049 + 2.857 \Big) + \Big( 0.096 + 0.089 \Big) \cdot \beta_1")
+![Y_i(\text{Catholic}) = \Big( 62.049 + 2.857 \Big) + \Big( 0.096 + 0.089 \Big) \cdot \beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%28%5Ctext%7BCatholic%7D%29%20%3D%20%5CBig%28%2062.049%20%2B%202.857%20%5CBig%29%20%2B%20%5CBig%28%200.096%20%2B%200.089%20%5CBig%29%20%5Ccdot%20%5Cbeta_1 "Y_i(\text{Catholic}) = \Big( 62.049 + 2.857 \Big) + \Big( 0.096 + 0.089 \Big) \cdot \beta_1")
 
 Figure 2 present the two lines.
 
@@ -886,7 +886,7 @@ resid(fit)
     ##    5.0645917   -5.4529003    0.2023737   -9.6620893  -15.2742579
 
 > A problem, though, is that these are defined as
-> ![Y_i - \\hat Y_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20-%20%5Chat%20Y_i "Y_i - \hat Y_i")
+> ![Y_i - \hat Y_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_i%20-%20%5Chat%20Y_i "Y_i - \hat Y_i")
 > i and thus **have the units of the outcome**. This isn’t great for
 > comparing residual values across different analyses with different
 > experiments. So, some efforts to standardize residuals have been made.

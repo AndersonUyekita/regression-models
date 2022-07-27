@@ -3,16 +3,16 @@
 
 -   👨🏻‍💻 Author: Anderson H Uyekita
 -   📚 Specialization: <a
-    href="https://www.coursera.org/specializations/data-science-foundations-r"
-    target="_blank" rel="noopener">Data Science: Foundations using R
-    Specialization</a>
+    href="https://www.coursera.org/specializations/data-science-statistics-machine-learning"
+    target="_blank" rel="noopener">Data Science: Statistics and Machine
+    Learning Specialization</a>
 -   📖 Course:
     <a href="https://www.coursera.org/learn/regression-models"
     target="_blank" rel="noopener">Regression Models</a>
     -   🧑‍🏫 Instructor: Brian Caffo
 -   📆 Week 4
     -   🚦 Start: Tuesday, 05 July 2022
-    -   🏁 Finish: Sunday, 10 July 2022
+    -   🏁 Finish: Tuesday, 19 July 2022
 
 ------------------------------------------------------------------------
 
@@ -142,7 +142,7 @@ summary(fit)$coeff %>% round(4)
 
 **Model**
 
-![ravenWinNum = \\underbrace{0.2850}\_{\\text{Probability to win with 0 points scpred}} + \\underbrace{0.0159 \\cdot ravenScore}\_{\\text{ increase in probability of a win for each additional point}}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;ravenWinNum%20%3D%20%5Cunderbrace%7B0.2850%7D_%7B%5Ctext%7BProbability%20to%20win%20with%200%20points%20scpred%7D%7D%20%2B%20%5Cunderbrace%7B0.0159%20%5Ccdot%20ravenScore%7D_%7B%5Ctext%7B%20increase%20in%20probability%20of%20a%20win%20for%20each%20additional%20point%7D%7D "ravenWinNum = \underbrace{0.2850}_{\text{Probability to win with 0 points scpred}} + \underbrace{0.0159 \cdot ravenScore}_{\text{ increase in probability of a win for each additional point}}")
+![ravenWinNum = \underbrace{0.2850}\_{\text{Probability to win with 0 points scpred}} + \underbrace{0.0159 \cdot ravenScore}\_{\text{ increase in probability of a win for each additional point}}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;ravenWinNum%20%3D%20%5Cunderbrace%7B0.2850%7D_%7B%5Ctext%7BProbability%20to%20win%20with%200%20points%20scpred%7D%7D%20%2B%20%5Cunderbrace%7B0.0159%20%5Ccdot%20ravenScore%7D_%7B%5Ctext%7B%20increase%20in%20probability%20of%20a%20win%20for%20each%20additional%20point%7D%7D "ravenWinNum = \underbrace{0.2850}_{\text{Probability to win with 0 points scpred}} + \underbrace{0.0159 \cdot ravenScore}_{\text{ increase in probability of a win for each additional point}}")
 
 **Interpretation**
 

@@ -3,9 +3,9 @@
 
 -   👨🏻‍💻 Author: Anderson H Uyekita
 -   📚 Specialization: <a
-    href="https://www.coursera.org/specializations/data-science-foundations-r"
-    target="_blank" rel="noopener">Data Science: Foundations using R
-    Specialization</a>
+    href="https://www.coursera.org/specializations/data-science-statistics-machine-learning"
+    target="_blank" rel="noopener">Data Science: Statistics and Machine
+    Learning Specialization</a>
 -   📖 Course:
     <a href="https://www.coursera.org/learn/regression-models"
     target="_blank" rel="noopener">Regression Models</a>
@@ -334,17 +334,17 @@ summary(fit_q6)$coeff
     ## x           -0.005545455 0.02170090 -0.2555403 8.047533e-01
     ## stick        1.018612903 0.04287356 23.7585306 1.048711e-08
 
-![y = \\beta_0 + \\beta_1 \\cdot x + \\beta_2 \\cdot stick](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;y%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1%20%5Ccdot%20x%20%2B%20%5Cbeta_2%20%5Ccdot%20stick "y = \beta_0 + \beta_1 \cdot x + \beta_2 \cdot stick")
+![y = \beta_0 + \beta_1 \cdot x + \beta_2 \cdot stick](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;y%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1%20%5Ccdot%20x%20%2B%20%5Cbeta_2%20%5Ccdot%20stick "y = \beta_0 + \beta_1 \cdot x + \beta_2 \cdot stick")
 
-![y = -0.1825 -0.0055 \\cdot x + 1.018612903 \\cdot stick](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;y%20%3D%20-0.1825%20-0.0055%20%5Ccdot%20x%20%2B%201.018612903%20%5Ccdot%20stick "y = -0.1825 -0.0055 \cdot x + 1.018612903 \cdot stick")
+![y = -0.1825 -0.0055 \cdot x + 1.018612903 \cdot stick](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;y%20%3D%20-0.1825%20-0.0055%20%5Ccdot%20x%20%2B%201.018612903%20%5Ccdot%20stick "y = -0.1825 -0.0055 \cdot x + 1.018612903 \cdot stick")
 
 stick = 0
 
-![y = -0.1825 -0.0055 \\cdot x](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;y%20%3D%20-0.1825%20-0.0055%20%5Ccdot%20x "y = -0.1825 -0.0055 \cdot x")
+![y = -0.1825 -0.0055 \cdot x](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;y%20%3D%20-0.1825%20-0.0055%20%5Ccdot%20x "y = -0.1825 -0.0055 \cdot x")
 
 stick = 1 (after the x = ZERO)
 
-![y = -0.1825 + 1.013067 \\cdot x ](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;y%20%3D%20-0.1825%20%2B%201.013067%20%5Ccdot%20x%20 "y = -0.1825 + 1.013067 \cdot x ")
+![y = -0.1825 + 1.013067 \cdot x](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;y%20%3D%20-0.1825%20%2B%201.013067%20%5Ccdot%20x "y = -0.1825 + 1.013067 \cdot x")
 
 Printing the value in a ggplot2.
 

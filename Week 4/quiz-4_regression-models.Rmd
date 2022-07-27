@@ -2,7 +2,6 @@
 title: '`Quiz 4` Regression Models'
 author: '`r if(knitr::is_html_output()) {"&#x1f468;&#x1F3FB;&#x200d;&#x1f4bb; Anderson H Uyekita"} else {NULL}`'
 output:
-  github_document: default
   html_document:
     self_contained: true
     toc: true
@@ -10,16 +9,17 @@ output:
     toc_float:
       collapsed: false
       smooth_scroll: true
+  github_document: default
 params:
   author: 'Anderson H Uyekita'
   course: 'Regression Models'
   course_url: 'https://www.coursera.org/learn/regression-models'
-  specialization: 'Data Science: Foundations using R Specialization'
-  specialization_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
+  specialization: 'Data Science: Statistics and Machine Learning Specialization'
+  specialization_url: 'https://www.coursera.org/specializations/data-science-statistics-machine-learning'
   instructor: 'Brian Caffo'
   course_start: !r lubridate::ymd('2022/07/05', tz = 'America/Sao_Paulo')
   course_finish: !r lubridate::ymd('2022/07/19', tz = 'America/Sao_Paulo')
-  week: ' Week 4'
+  week: 'Week 4'
 always_allow_html: true
 ---
 

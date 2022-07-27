@@ -3,16 +3,16 @@
 
 -   👨🏻‍💻 Author: Anderson H Uyekita
 -   📚 Specialization: <a
-    href="https://www.coursera.org/specializations/data-science-foundations-r"
-    target="_blank" rel="noopener">Data Science: Foundations using R
-    Specialization</a>
+    href="https://www.coursera.org/specializations/data-science-statistics-machine-learning"
+    target="_blank" rel="noopener">Data Science: Statistics and Machine
+    Learning Specialization</a>
 -   📖 Course:
     <a href="https://www.coursera.org/learn/regression-models"
     target="_blank" rel="noopener">Regression Models</a>
     -   🧑‍🏫 Instructor: Brian Caffo
 -   📆 Week 1
     -   🚦 Start: Tuesday, 05 July 2022
-    -   🏁 Finish: Wednesday, 06 July 2022
+    -   🏁 Finish: Monday, 18 July 2022
 
 ------------------------------------------------------------------------
 
@@ -92,18 +92,18 @@ ggplot(data = reshape::melt(galton), aes(x = value, fill = variable)) +
 ![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
 The middle is a given
-![\\mu](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmu "\mu")
+![\mu](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmu "\mu")
 which minimizes the summation:
 
-![\\sum\_{i=1}^{n}(Y\_{i} - \\mu)^2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%28Y_%7Bi%7D%20-%20%5Cmu%29%5E2 "\sum_{i=1}^{n}(Y_{i} - \mu)^2")
+![\sum\_{i=1}^{n}(Y\_{i} - \mu)^2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%28Y_%7Bi%7D%20-%20%5Cmu%29%5E2 "\sum_{i=1}^{n}(Y_{i} - \mu)^2")
 
 -   This is physical center of mass of the histogram.
 
-![\\text{Least Squares}=\\sum\_{i=1}^{n}(Y\_{i} - \\bar Y)^2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BLeast%20Squares%7D%3D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%28Y_%7Bi%7D%20-%20%5Cbar%20Y%29%5E2 "\text{Least Squares}=\sum_{i=1}^{n}(Y_{i} - \bar Y)^2")
+![\text{Least Squares}=\sum\_{i=1}^{n}(Y\_{i} - \bar Y)^2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BLeast%20Squares%7D%3D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%28Y_%7Bi%7D%20-%20%5Cbar%20Y%29%5E2 "\text{Least Squares}=\sum_{i=1}^{n}(Y_{i} - \bar Y)^2")
 
 Where
 
--   ![\\bar Y](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbar%20Y "\bar Y"):
+-   ![\bar Y](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbar%20Y "\bar Y"):
     Mean of
     ![Y_n](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y_n "Y_n")
 
@@ -112,11 +112,11 @@ Where
 
 Strategy is minimize the Error Summation:
 
-![\\text{Minimize} \\sum\_{i=1}^{n}\\Big( Y\_{i} - \\bar Y \\Big)^2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BMinimize%7D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5CBig%28%20Y_%7Bi%7D%20-%20%5Cbar%20Y%20%5CBig%29%5E2 "\text{Minimize} \sum_{i=1}^{n}\Big( Y_{i} - \bar Y \Big)^2")
+![\text{Minimize} \sum\_{i=1}^{n}\Big( Y\_{i} - \bar Y \Big)^2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BMinimize%7D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5CBig%28%20Y_%7Bi%7D%20-%20%5Cbar%20Y%20%5CBig%29%5E2 "\text{Minimize} \sum_{i=1}^{n}\Big( Y_{i} - \bar Y \Big)^2")
 
 or the Average of error:
 
-![\\text{Minimize} \\frac{\\sum\_{i=1}^{n}\\Big( Y\_{i} - \\bar Y \\Big)^2}{n}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BMinimize%7D%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5CBig%28%20Y_%7Bi%7D%20-%20%5Cbar%20Y%20%5CBig%29%5E2%7D%7Bn%7D "\text{Minimize} \frac{\sum_{i=1}^{n}\Big( Y_{i} - \bar Y \Big)^2}{n}")
+![\text{Minimize} \frac{\sum\_{i=1}^{n}\Big( Y\_{i} - \bar Y \Big)^2}{n}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Ctext%7BMinimize%7D%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5CBig%28%20Y_%7Bi%7D%20-%20%5Cbar%20Y%20%5CBig%29%5E2%7D%7Bn%7D "\text{Minimize} \frac{\sum_{i=1}^{n}\Big( Y_{i} - \bar Y \Big)^2}{n}")
 
 The Average will be the Error Summation divided by n, which is a
 constant. So it will not change the minimization results.
@@ -125,7 +125,7 @@ constant. So it will not change the minimization results.
 
 Considering a line crossing the origin and minimizing the squared error.
 
-![\\sum\_{i=1}^n{\\Big( Y_i - \\underbrace{X_i \\cdot \\beta}\_{\\text{Estimated Functoin}} \\Big)^2}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csum_%7Bi%3D1%7D%5En%7B%5CBig%28%20Y_i%20-%20%5Cunderbrace%7BX_i%20%5Ccdot%20%5Cbeta%7D_%7B%5Ctext%7BEstimated%20Functoin%7D%7D%20%5CBig%29%5E2%7D "\sum_{i=1}^n{\Big( Y_i - \underbrace{X_i \cdot \beta}_{\text{Estimated Functoin}} \Big)^2}")
+![\sum\_{i=1}^n{\Big( Y_i - \underbrace{X_i \cdot \beta}\_{\text{Estimated Functoin}} \Big)^2}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csum_%7Bi%3D1%7D%5En%7B%5CBig%28%20Y_i%20-%20%5Cunderbrace%7BX_i%20%5Ccdot%20%5Cbeta%7D_%7B%5Ctext%7BEstimated%20Functoin%7D%7D%20%5CBig%29%5E2%7D "\sum_{i=1}^n{\Big( Y_i - \underbrace{X_i \cdot \beta}_{\text{Estimated Functoin}} \Big)^2}")
 
 -   Generally is it a bad practice.
 
@@ -136,7 +136,7 @@ data. So doing it, the intercept should be zero.
 
 Explaining the `lm` function:
 
-![lm(data = galton, I(\\underbrace{child - mean(child)}\_{\\text{centering in y-axis}}) \\sim I(\\underbrace{parent - mean(parent)}\_{\\text{centering in x-axis}}) \\underbrace{- 1}\_{\\text{get rid of the intercept}})](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;lm%28data%20%3D%20galton%2C%20I%28%5Cunderbrace%7Bchild%20-%20mean%28child%29%7D_%7B%5Ctext%7Bcentering%20in%20y-axis%7D%7D%29%20%5Csim%20I%28%5Cunderbrace%7Bparent%20-%20mean%28parent%29%7D_%7B%5Ctext%7Bcentering%20in%20x-axis%7D%7D%29%20%5Cunderbrace%7B-%201%7D_%7B%5Ctext%7Bget%20rid%20of%20the%20intercept%7D%7D%29 "lm(data = galton, I(\underbrace{child - mean(child)}_{\text{centering in y-axis}}) \sim I(\underbrace{parent - mean(parent)}_{\text{centering in x-axis}}) \underbrace{- 1}_{\text{get rid of the intercept}})")
+![lm(data = galton, I(\underbrace{child - mean(child)}\_{\text{centering in y-axis}}) \sim I(\underbrace{parent - mean(parent)}\_{\text{centering in x-axis}}) \underbrace{- 1}\_{\text{get rid of the intercept}})](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;lm%28data%20%3D%20galton%2C%20I%28%5Cunderbrace%7Bchild%20-%20mean%28child%29%7D_%7B%5Ctext%7Bcentering%20in%20y-axis%7D%7D%29%20%5Csim%20I%28%5Cunderbrace%7Bparent%20-%20mean%28parent%29%7D_%7B%5Ctext%7Bcentering%20in%20x-axis%7D%7D%29%20%5Cunderbrace%7B-%201%7D_%7B%5Ctext%7Bget%20rid%20of%20the%20intercept%7D%7D%29 "lm(data = galton, I(\underbrace{child - mean(child)}_{\text{centering in y-axis}}) \sim I(\underbrace{parent - mean(parent)}_{\text{centering in x-axis}}) \underbrace{- 1}_{\text{get rid of the intercept}})")
 
 The `I()` means “as is”, so the `child - mean(child)` will be evaluate
 as is.
@@ -168,11 +168,11 @@ center of the dataset.
 
 Possible function which explains the child’s Height.
 
-![\\underbrace{\\text{Child's Height}}\_{Y} = \\beta_0 + \\underbrace{\\text{Parent's Height}}\_{X} \\cdot \\beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cunderbrace%7B%5Ctext%7BChild%27s%20Height%7D%7D_%7BY%7D%20%3D%20%5Cbeta_0%20%2B%20%5Cunderbrace%7B%5Ctext%7BParent%27s%20Height%7D%7D_%7BX%7D%20%5Ccdot%20%5Cbeta_1 "\underbrace{\text{Child's Height}}_{Y} = \beta_0 + \underbrace{\text{Parent's Height}}_{X} \cdot \beta_1")
+![\underbrace{\text{Child's Height}}\_{Y} = \beta_0 + \underbrace{\text{Parent's Height}}\_{X} \cdot \beta_1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cunderbrace%7B%5Ctext%7BChild%27s%20Height%7D%7D_%7BY%7D%20%3D%20%5Cbeta_0%20%2B%20%5Cunderbrace%7B%5Ctext%7BParent%27s%20Height%7D%7D_%7BX%7D%20%5Ccdot%20%5Cbeta_1 "\underbrace{\text{Child's Height}}_{Y} = \beta_0 + \underbrace{\text{Parent's Height}}_{X} \cdot \beta_1")
 
 I want to minimize:
 
-![\\sum\_{i=1}^n{ \\Big(Y_i-(\\underbrace{\\beta_0+\\beta_1 \\cdot X_i}\_{\\text{Estimated Function}})\\Big)^2 }](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csum_%7Bi%3D1%7D%5En%7B%20%5CBig%28Y_i-%28%5Cunderbrace%7B%5Cbeta_0%2B%5Cbeta_1%20%5Ccdot%20X_i%7D_%7B%5Ctext%7BEstimated%20Function%7D%7D%29%5CBig%29%5E2%20%7D "\sum_{i=1}^n{ \Big(Y_i-(\underbrace{\beta_0+\beta_1 \cdot X_i}_{\text{Estimated Function}})\Big)^2 }")
+![\sum\_{i=1}^n{ \Big(Y_i-(\underbrace{\beta_0+\beta_1 \cdot X_i}\_{\text{Estimated Function}})\Big)^2 }](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csum_%7Bi%3D1%7D%5En%7B%20%5CBig%28Y_i-%28%5Cunderbrace%7B%5Cbeta_0%2B%5Cbeta_1%20%5Ccdot%20X_i%7D_%7B%5Ctext%7BEstimated%20Function%7D%7D%29%5CBig%29%5E2%20%7D "\sum_{i=1}^n{ \Big(Y_i-(\underbrace{\beta_0+\beta_1 \cdot X_i}_{\text{Estimated Function}})\Big)^2 }")
 
 ``` r
 # Assign the values to variables y and x.
@@ -192,7 +192,7 @@ beta0; beta1;
     ## [1] 0.6462906
 
 As you can see, the slope
-(![\\beta1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta1 "\beta1"))
+(![\beta1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbeta1 "\beta1"))
 is equal to the centered data!! Centering the data have just shifted the
 data and has changed only the intercept.
 

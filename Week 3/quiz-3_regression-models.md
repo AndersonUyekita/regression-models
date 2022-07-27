@@ -3,9 +3,9 @@
 
 -   👨🏻‍💻 Author: Anderson H Uyekita
 -   📚 Specialization: <a
-    href="https://www.coursera.org/specializations/data-science-foundations-r"
-    target="_blank" rel="noopener">Data Science: Foundations using R
-    Specialization</a>
+    href="https://www.coursera.org/specializations/data-science-statistics-machine-learning"
+    target="_blank" rel="noopener">Data Science: Statistics and Machine
+    Learning Specialization</a>
 -   📖 Course:
     <a href="https://www.coursera.org/learn/regression-models"
     target="_blank" rel="noopener">Regression Models</a>
@@ -202,15 +202,15 @@ summary(lm(mpg ~ wt + factor(cyl), data = mtcars))$coeff;
 The `0.5` will not affect the interpretation or change the results of
 the final model.
 
-![mpg = \\beta_0 + \\beta_1 \\cdot wt + \\beta_2 \\cdot cyl_6 + \\beta_3 \\cdot cyl_8](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;mpg%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1%20%5Ccdot%20wt%20%2B%20%5Cbeta_2%20%5Ccdot%20cyl_6%20%2B%20%5Cbeta_3%20%5Ccdot%20cyl_8 "mpg = \beta_0 + \beta_1 \cdot wt + \beta_2 \cdot cyl_6 + \beta_3 \cdot cyl_8")
+![mpg = \beta_0 + \beta_1 \cdot wt + \beta_2 \cdot cyl_6 + \beta_3 \cdot cyl_8](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;mpg%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1%20%5Ccdot%20wt%20%2B%20%5Cbeta_2%20%5Ccdot%20cyl_6%20%2B%20%5Cbeta_3%20%5Ccdot%20cyl_8 "mpg = \beta_0 + \beta_1 \cdot wt + \beta_2 \cdot cyl_6 + \beta_3 \cdot cyl_8")
 
 For model 1:
 
-![mpg = 33.99 -6.41 \\cdot wt \\cdot 0.5 -4.25 \\cdot cyl_6 -6.07 \\cdot cyl_8](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;mpg%20%3D%2033.99%20-6.41%20%5Ccdot%20wt%20%5Ccdot%200.5%20-4.25%20%5Ccdot%20cyl_6%20-6.07%20%5Ccdot%20cyl_8 "mpg = 33.99 -6.41 \cdot wt \cdot 0.5 -4.25 \cdot cyl_6 -6.07 \cdot cyl_8")
+![mpg = 33.99 -6.41 \cdot wt \cdot 0.5 -4.25 \cdot cyl_6 -6.07 \cdot cyl_8](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;mpg%20%3D%2033.99%20-6.41%20%5Ccdot%20wt%20%5Ccdot%200.5%20-4.25%20%5Ccdot%20cyl_6%20-6.07%20%5Ccdot%20cyl_8 "mpg = 33.99 -6.41 \cdot wt \cdot 0.5 -4.25 \cdot cyl_6 -6.07 \cdot cyl_8")
 
 For model 2:
 
-![mpg = 33.99 -3.206 \\cdot wt -4.25 \\cdot cyl_6 -6.07 \\cdot cyl_8](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;mpg%20%3D%2033.99%20-3.206%20%5Ccdot%20wt%20-4.25%20%5Ccdot%20cyl_6%20-6.07%20%5Ccdot%20cyl_8 "mpg = 33.99 -3.206 \cdot wt -4.25 \cdot cyl_6 -6.07 \cdot cyl_8")
+![mpg = 33.99 -3.206 \cdot wt -4.25 \cdot cyl_6 -6.07 \cdot cyl_8](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;mpg%20%3D%2033.99%20-3.206%20%5Ccdot%20wt%20-4.25%20%5Ccdot%20cyl_6%20-6.07%20%5Ccdot%20cyl_8 "mpg = 33.99 -3.206 \cdot wt -4.25 \cdot cyl_6 -6.07 \cdot cyl_8")
 
 In the end, both models has the same equation.
 
